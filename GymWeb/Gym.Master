@@ -12,8 +12,11 @@
     <form id="form1" runat="server">
         <div style="height: 362px">
             <asp:Image ID="LogoImg" runat="server" Height="95px" Width="140px" src="img/GymLogo.png"/>
-            <br />
-            <asp:SiteMapPath ID="SiteMapPath1" runat="server">
+            <asp:SiteMapPath ID="SiteMapPath1" runat="server" style Font-Names="Verdana" Font-Size="0.8em" PathSeparator=" : ">
+                <CurrentNodeStyle ForeColor="#333333" />
+                <NodeStyle Font-Bold="True" ForeColor="#666666"  Font-Underline="false" />
+                <PathSeparatorStyle Font-Bold="True" ForeColor="#1C5E55" />
+                <RootNodeStyle Font-Bold="True" ForeColor="#1C5E55" Font-Underline="false" />
             </asp:SiteMapPath>
             <br />
             <br />
