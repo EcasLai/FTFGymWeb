@@ -1,13 +1,17 @@
-# GymWeb
+# FTF GymWeb
 
 ## Description
-Not yet...
+Web Development Assignment
 
-## How to use
+## Screenshot
 
 
-## Author
-1. [Joshua Koh](https://github.com/Joshuakme)
-2. [Lai Chee Sheng](https://github.com/EcasLai)
+## Technology Used
+1. ASP.NET
+2. SQL
+
+## Team Member
+1. [Ecas Lai](https://github.com/EcasLai)
+2. [Joshua Koh](https://github.com/Joshuakme)
 3. [Naik Kok Loong]
 4. [Shia Chai Fen]
