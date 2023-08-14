@@ -6,13 +6,27 @@
     <title></title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
+
+    <!-- Favicon Configuration -->
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#000000">
+
+    <!-- Linking Stylesheet -->
     <link href="Style/master.css?Version=1" rel="stylesheet" type="text/css" runat="server" />
 </head>
 <body>
     <form id="form1" runat="server">
         <nav>
-            <section class="upper-nav">
-                <asp:Image ID="logoImg" runat="server" src="img/GymLogo.png" />
+            <section class="nav-left">
+                <a href="Homepage.aspx" id="logo">
+                    <asp:Image ID="logoImg" runat="server" src="img/Logo (transparent).png" />
+                    <h1>FTFGym</h1>
+                </a>
                 
                <!-- <asp:SiteMapPath ID="SiteMapPath1" runat="server" Font-Names="Verdana" Font-Size="0.8em" PathSeparator=" : ">
                     <CurrentNodeStyle ForeColor="#333333" />
@@ -22,7 +36,7 @@
                 </asp:SiteMapPath> -->
             </section>
             
-            <section class="lower-nav">
+            <section class="nav-right">
                 <ul class="menu-list">
                     <li><a href="Homepage.aspx" class="nav-link" >Home</a></li>
                     <li><a href="#" class="nav-link">Product</a></li>

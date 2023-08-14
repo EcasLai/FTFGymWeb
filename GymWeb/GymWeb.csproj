@@ -74,7 +74,10 @@
     </Content>
     <Content Include="ClassList.aspx" />
     <Content Include="Homepage.aspx" />
+    <Content Include="Img\account.png" />
     <Content Include="Img\GymLogo.png" />
+    <Content Include="Img\Logo %28transparent%29.png" />
+    <Content Include="Img\Logo.png" />
     <Content Include="ProductList.aspx" />
     <Content Include="Style\master.css" />
     <Content Include="Web.config" />
