@@ -5,6 +5,7 @@
 
 html {
     height: -webkit-fill-available; /* We have to fix html height */
+    background-color: #eeeeee;
 }
 
 body {
@@ -90,7 +91,6 @@ nav section ul {
     align-items: center;
     padding-left: 0;
     list-style: none;
-
 }
 
 nav section ul li {
