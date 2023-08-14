@@ -68,6 +68,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Account.aspx" />
+    <Content Include="App_Data\FTFGym.mdf" />
+    <Content Include="App_Data\FTFGym_log.ldf">
+      <DependentUpon>FTFGym.mdf</DependentUpon>
+    </Content>
     <Content Include="ClassList.aspx" />
     <Content Include="Homepage.aspx" />
     <Content Include="Img\GymLogo.png" />
@@ -124,9 +128,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
