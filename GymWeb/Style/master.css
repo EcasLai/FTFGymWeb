@@ -1,5 +1,6 @@
 :root {
     --theme-red: #c30032;
+    --theme-yellow: #e2cc4e;
 }
 
 html {
@@ -84,7 +85,7 @@ nav section ul li {
 
 nav section ul li:hover {
     transition: all 0.6s;
-    border-bottom: 3px solid var(--theme-red);
+    border-bottom: 3px solid var(--theme-yellow);
 }
 
 nav section ul li a {
