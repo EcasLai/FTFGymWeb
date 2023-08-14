@@ -95,7 +95,7 @@ nav section ul {
 
 nav section ul li {
     margin: 0 1vw;
-    padding: 1vw 2.5vh;
+    padding: 1vw 0;
     font-size: 1.2rem;
     font-weight: 600;
     border-bottom: 3px solid transparent;
@@ -109,6 +109,7 @@ nav section ul li:hover {
 }
 
 nav section ul li a {
+    padding: 1vw 2.5vh;
     text-decoration: none;
     color: black;
 }
