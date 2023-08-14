@@ -7,15 +7,11 @@ using System.Web.UI.WebControls;
 
 namespace GymWeb
 {
-    public partial class Account : System.Web.UI.Page
+    public partial class MyOrders : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
-        }
-
-        protected void txtPhoneNumber_TextChanged(object sender, EventArgs e)
-        {
         }
     }
 }

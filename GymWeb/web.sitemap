@@ -4,5 +4,6 @@
     <siteMapNode url="~/ClassList.aspx" title="ClassList"  description="Class Registration Site" />
     <siteMapNode url="~/ProductList.aspx" title="ProductList"  description="Product Selling Site" />
 	<siteMapNode url="~/Account.aspx" title="Account"  description="Account Management Site" />
+	  <siteMapNode url="~/Account/MyOrders.aspx" title="Account Overview"  description="Account Management Site" />
   </siteMapNode>
 </siteMap>

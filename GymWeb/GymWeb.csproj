@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Account.aspx" />
+    <Content Include="Account\MyOrders.aspx" />
     <Content Include="App_Data\FTFGym.mdf" />
     <Content Include="App_Data\FTFGym_log.ldf">
       <DependentUpon>FTFGym.mdf</DependentUpon>
@@ -83,6 +84,7 @@
     <Content Include="Img\account-icon\padlock.png" />
     <Content Include="Img\account-icon\user.png" />
     <Content Include="ProductList.aspx" />
+    <Content Include="script\Account.js" />
     <Content Include="Style\master.css" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -93,6 +95,13 @@
     </Compile>
     <Compile Include="Account.aspx.designer.cs">
       <DependentUpon>Account.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\MyOrders.aspx.cs">
+      <DependentUpon>MyOrders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\MyOrders.aspx.designer.cs">
+      <DependentUpon>MyOrders.aspx</DependentUpon>
     </Compile>
     <Compile Include="ClassList.aspx.cs">
       <DependentUpon>ClassList.aspx</DependentUpon>

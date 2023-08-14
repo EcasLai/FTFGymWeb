@@ -18,6 +18,17 @@
 
     <!-- Linking Stylesheet -->
     <link href="Style/master.css?Version=1" rel="stylesheet" type="text/css" runat="server" />
+
+    <!-- Javascript Functions -->
+    <SCRIPT language=Javascript>
+      function isNumberKey(evt)
+      {
+         var charCode = (evt.which) ? evt.which : evt.keyCode;
+         if (charCode > 31 && (charCode < 48 || charCode > 57))
+            return false;    
+         return true;
+      }
+    </SCRIPT>
 </head>
 <body>
     <form id="form1" runat="server">
