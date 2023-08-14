@@ -72,6 +72,7 @@
     <Content Include="Homepage.aspx" />
     <Content Include="Img\GymLogo.png" />
     <Content Include="ProductList.aspx" />
+    <Content Include="Style\master.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -114,7 +115,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Gym.Master" />
-    <Content Include="Gym.sitemap" />
+    <Content Include="web.sitemap" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
