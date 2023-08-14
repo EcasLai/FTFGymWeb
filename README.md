@@ -11,7 +11,7 @@ Web Development Assignment
 2. SQL
 
 ## Team Member
-1. Ecas Lai
+1. [Ecas Lai](https://github.com/EcasLai)
 2. [Joshua Koh](https://github.com/Joshuakme)
-3. Kok Loong
-4. Tifanny Shia
+3. [Naik Kok Loong]
+4. [Shia Chai Fen]
