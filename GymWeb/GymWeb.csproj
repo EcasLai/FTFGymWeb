@@ -68,7 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Account.aspx" />
-    <Content Include="Account\MyOrders.aspx" />
+    <Content Include="AccountOverview.aspx" />
     <Content Include="App_Data\FTFGym.mdf" />
     <Content Include="App_Data\FTFGym_log.ldf">
       <DependentUpon>FTFGym.mdf</DependentUpon>
@@ -83,6 +83,7 @@
     <Content Include="Img\Logo.png" />
     <Content Include="Img\account-icon\padlock.png" />
     <Content Include="Img\account-icon\user.png" />
+    <Content Include="MyOrders.aspx" />
     <Content Include="ProductList.aspx" />
     <Content Include="script\Account.js" />
     <Content Include="Style\master.css" />
@@ -96,12 +97,19 @@
     <Compile Include="Account.aspx.designer.cs">
       <DependentUpon>Account.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Account\MyOrders.aspx.cs">
-      <DependentUpon>MyOrders.aspx</DependentUpon>
+    <Compile Include="Account.master.cs">
+      <DependentUpon>Account.master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Account\MyOrders.aspx.designer.cs">
-      <DependentUpon>MyOrders.aspx</DependentUpon>
+    <Compile Include="Account.master.designer.cs">
+      <DependentUpon>Account.master</DependentUpon>
+    </Compile>
+    <Compile Include="AccountOverview.aspx.cs">
+      <DependentUpon>AccountOverview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AccountOverview.aspx.designer.cs">
+      <DependentUpon>AccountOverview.aspx</DependentUpon>
     </Compile>
     <Compile Include="ClassList.aspx.cs">
       <DependentUpon>ClassList.aspx</DependentUpon>
@@ -124,6 +132,13 @@
     <Compile Include="Homepage.aspx.designer.cs">
       <DependentUpon>Homepage.aspx</DependentUpon>
     </Compile>
+    <Compile Include="MyOrders.aspx.cs">
+      <DependentUpon>MyOrders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyOrders.aspx.designer.cs">
+      <DependentUpon>MyOrders.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ProductList.aspx.cs">
       <DependentUpon>ProductList.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -136,6 +151,7 @@
   <ItemGroup>
     <Content Include="Gym.Master" />
     <Content Include="web.sitemap" />
+    <Content Include="Account.master" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
