@@ -1,0 +1,1 @@
+﻿INSERT INTO [dbo].[Customer] VALUES ("Joshua", "Koh", "joshua@gmail.com", "01234567890", NULL)

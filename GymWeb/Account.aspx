@@ -1,99 +1,9 @@
-﻿<%@ Page Title="Account | FTF Gym Web" Language="C#" MasterPageFile="~/Gym.Master" AutoEventWireup="true" CodeBehind="Account.aspx.cs" Inherits="GymWeb.Account" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+﻿<%@ Page Title="Account | FTF Gym Web" Language="C#" MasterPageFile="~/Account.master" AutoEventWireup="true" CodeBehind="Account.aspx.cs" Inherits="GymWeb.Account" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="AccountHead" runat="server">
     <style type="text/css">
-        .account-wrapper {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: flex-start;
-            margin: 0 20vw;
-        }
-
-        /* Left Sidebar - Upper */
-        .left-sidebar {
-            width: 20vw;
-            display: flex;
-            flex-direction: column;
-            margin-right: 1.5vw;
-            
-        }
-
-        .welcome-user-section {
-            height: 10vh;
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            padding: 2rem 0;
-            background-color: #ffffff;
-            border-radius: 0.5rem;
-        }
-
-        .welcome-user-section img {
-            height: 80px;
-            margin-right: 1.5rem;
-        }
-
-        .welcome-user-section div {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: flex-start;
-        }
-
-        .welcome-user-section div span:first-child {
-            margin-bottom: 0.4rem;
-        }
-
-        #user-fullname {
-            letter-spacing: 0.2em;
-            font-weight: 600;
-        }
-
-        /* Left Sidebar - Nav */
-        .guide-section ul {
-            padding: 0;
-            list-style-type: none;
-        }
-
-        .guide-section li.guide-list-item {
-            position: relative;
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-start;
-            align-items: center;
-            margin-bottom: 0.5rem;
-            padding: 1rem 2rem;
-            background-color: #ffffff;
-            border-radius: 0.5rem 0 0 0.5rem;
-        }
-
-        .guide-section li.guide-list-item.active-item {
-            background-color: rgba(1, 1, 1, 0.2);
-            border-right: 4px solid #e2cc4e;
-        }
-
-        .guide-section li.guide-list-item span:first-child img {
-            height: 24px;
-            width: 24px;
-            margin-right: 1rem;
-        }
-
-        .guide-section li.guide-list-item span:last-child {
-            font-weight: 600;
-        }
-
         /* Right Content */
-        .right-content {
-            width: 70%;
-            height: 70vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 2rem 10%;
-            background-color: #ffffff;
-            color: black;
+        .right-content #section-title {
+            margin-bottom: 2rem;
         }
 
         .right-content .form-input {
@@ -184,101 +94,61 @@
         }
     </style>
 
-    <!-- Javascript -->
-    <script type="text/javascript" src ="script/Account.js" defer></script>
 </asp:Content>
-<asp:Content ID="AccountContent" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="account-wrapper">
-        <section class="left-sidebar">
-            <section class="welcome-user-section">
-                <asp:Image runat="server" ImageUrl="Img/account.png" ></asp:Image>
-                <div>
-                    <span>Hi, </span>
-                    <span id="user-fullname">John Newman</span>  
-                </div>
-            </section>
+
+<asp:Content ID="Content2" ContentPlaceHolderID="AccountContent" runat="server">
+  
+        <h2 id="section-title">Account Overview</h2>
+        <div class="form-input-row">
+            <div class="form-input form-input-short">
+                <asp:Label ID="lblUsername" runat="server" Text="Username" ></asp:Label>
+                <asp:TextBox ID="txtUsername" runat="server" placeholder="Username" ReadOnly="true" Enabled="false"></asp:TextBox>
+            </div>
+
+            <div class="form-input form-input-short">
+                <asp:Label ID="lblFirstName" runat="server" Text="First Name"></asp:Label>
+                <asp:TextBox ID="txtFirstName" runat="server" placeholder="First Name"></asp:TextBox>
+            </div>
+        </div>
             
-            <section class="guide-section">
-                <ul>
-                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Account/MyOrders.aspx">HyperLink</asp:HyperLink>
+        <div class="form-input">
+            <asp:Label ID="lblLastName" runat="server" Text="Last Name"></asp:Label>
+            <asp:TextBox ID="txtLastName" runat="server" placeholder="Last Name"></asp:TextBox>
+        </div>
 
-                    <li class="guide-list-item active-item">
-                        <span><asp:Image ID="AccountIcon" runat="server" ImageUrl="~/Img/account-icon/user.png" /></span>
-                        <span>Account overview</span>
-                    </li>
+        <div class="form-input">
+            <asp:Label ID="lblEmail" runat="server" Text="Email"></asp:Label>
+            <asp:TextBox ID="txtEmail" runat="server" TextMode="Email" placeholder="example@email.com"></asp:TextBox>
+        </div>
 
-                    <li class="guide-list-item">
-                        <span><asp:Image ID="OrderIcon" runat="server" ImageUrl="~/Img/account-icon/box.png" /></span>
-                        <span>My orders</span>      
-                    </li>
-
-                    <li class="guide-list-item">
-                        <span><asp:Image ID="LockIcon" runat="server" ImageUrl="~/Img/account-icon/padlock.png" /></span>
-                        <span>Change password</span>      
-                    </li>
-
-                    <li class="guide-list-item">
-                        <span><asp:Image ID="Image1" runat="server" ImageUrl="~/Img/account-icon/log-out.png" /></span>
-                        <span>Sign out</span>      
-                    </li>
-                </ul>
-            </section>
-        </section>
-
-        <section class="right-content">
-            <div class="form-input-row">
-                <div class="form-input form-input-short">
-                    <asp:Label ID="lblUsername" runat="server" Text="Username" ></asp:Label>
-                    <asp:TextBox ID="txtUsername" runat="server" placeholder="Username" ReadOnly="true" Enabled="false"></asp:TextBox>
-                </div>
-
-                <div class="form-input form-input-short">
-                    <asp:Label ID="lblFirstName" runat="server" Text="First Name"></asp:Label>
-                    <asp:TextBox ID="txtFirstName" runat="server" placeholder="First Name"></asp:TextBox>
-                </div>
+        <div class="form-input">
+            <asp:Label ID="lblPhoneNumber" runat="server" Text="Phone Number"></asp:Label>
+            <div>
+                <asp:DropDownList ID="ddlCountryCode" runat="server">
+                    <asp:ListItem>+60</asp:ListItem>    
+                    <asp:ListItem>+65</asp:ListItem>    
+                    <asp:ListItem>+886</asp:ListItem>   
+                </asp:DropDownList>
+                <asp:TextBox ID="txtPhoneNumber" runat="server" TextMode="Phone" onkeypress="return isNumberKey(event)"></asp:TextBox>
             </div>
-            
-            <div class="form-input">
-                <asp:Label ID="lblLastName" runat="server" Text="Last Name"></asp:Label>
-                <asp:TextBox ID="txtLastName" runat="server" placeholder="Last Name"></asp:TextBox>
-            </div>
-
-            <div class="form-input">
-                <asp:Label ID="lblEmail" runat="server" Text="Email"></asp:Label>
-                <asp:TextBox ID="txtEmail" runat="server" TextMode="Email" placeholder="example@email.com"></asp:TextBox>
-            </div>
-
-            <div class="form-input">
-                <asp:Label ID="lblPhoneNumber" runat="server" Text="Phone Number"></asp:Label>
-                <div>
-                    <asp:DropDownList ID="ddlCountryCode" runat="server">
-                        <asp:ListItem>+60</asp:ListItem>    
-                        <asp:ListItem>+65</asp:ListItem>    
-                        <asp:ListItem>+886</asp:ListItem>   
-                    </asp:DropDownList>
-                    <asp:TextBox ID="txtPhoneNumber" runat="server" TextMode="Phone" onkeypress="return isNumberKey(event)"></asp:TextBox>
-                </div>
                
-            </div>
+        </div>
             
-            <div class="form-input">
-                <asp:Label ID="lblGender" runat="server" Text="Gender"></asp:Label>
-                <asp:RadioButton ID="rbGenderMale" runat="server" Text="Male" GroupName="gender" CssClass="gender-radio" />
-                <asp:RadioButton ID="rbGenderFemale" runat="server" Text="Female" GroupName="gender" CssClass="gender-radio" />
-                <asp:RadioButton ID="rbGenderNone" runat="server" Text="Prefer not to say" GroupName="gender" CssClass="gender-radio" />
-            </div>
+        <div class="form-input">
+            <asp:Label ID="lblGender" runat="server" Text="Gender"></asp:Label>
+            <asp:RadioButton ID="rbGenderMale" runat="server" Text="Male" GroupName="gender" CssClass="gender-radio" />
+            <asp:RadioButton ID="rbGenderFemale" runat="server" Text="Female" GroupName="gender" CssClass="gender-radio" />
+            <asp:RadioButton ID="rbGenderNone" runat="server" Text="Prefer not to say" GroupName="gender" CssClass="gender-radio" />
+        </div>
             
-            <%--<div  class="form-button-group-edit">
-                <asp:Button ID="btnSubmit" runat="server" Text="Make Changes" CssClass="form-button" />
-                <button class="form-button">Discard</button>
-            </div>--%>
+        <%--<div  class="form-button-group-edit">
+            <asp:Button ID="btnSubmit" runat="server" Text="Make Changes" CssClass="form-button" />
+            <button class="form-button">Discard</button>
+        </div>--%>
 
-            <div  class="form-button-group-view">
-                <button class="form-button">Edit</button>
-            </div>
+        <div  class="form-button-group-view">
+            <button class="form-button">Edit</button>
+        </div>
            
-
-        </section>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server"></asp:SqlDataSource>
-    </div>
 </asp:Content>
