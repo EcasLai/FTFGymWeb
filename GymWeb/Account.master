@@ -57,26 +57,26 @@
             list-style-type: none;
         }
 
-        .guide-section ul a {
-            color: black;
-            text-decoration: none;
-
-        }
-
-        .guide-section li.guide-list-item {
-            position: relative;
+        .guide-section ul li a {
+            background-color: #ffffff;
+            padding: 1rem 2rem;
             display: flex;
             flex-direction: row;
             justify-content: flex-start;
             align-items: center;
-            margin-bottom: 0.5rem;
-            padding: 1rem 2rem;
             background-color: #ffffff;
-            border-radius: 0.5rem 0 0 0.5rem;
-            border-right: none;
+            color: black;
+            text-decoration: none;
         }
 
-        .guide-section li.guide-list-item.active-item {
+        .guide-section ul li.guide-list-item {
+            margin-bottom: 0.5rem;
+            border-radius: 0.5rem 0 0 0.5rem;
+            border-right: none;
+            overflow: hidden;
+        }
+
+        .guide-section ul li.guide-list-item.active-item a {
             background-color: rgba(1, 1, 1, 0.05);
             border-right: 4px solid #e2cc4e;
         }
@@ -101,11 +101,14 @@
             justify-content: center;
             align-items: center;
             padding: 2rem 10%;
+            padding-bottom: 4rem;
             background-color: #ffffff;
             color: black;
         }
 
     </style>
+
+    
 
     <asp:ContentPlaceHolder ID="AccountHead" runat="server"></asp:ContentPlaceHolder>
 
@@ -127,43 +130,60 @@
             
             <section class="guide-section">
                 <ul>
-                    
-                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Account.aspx">
-                        <li class="guide-list-item active-item">
+                    <li class="guide-list-item active-item" >
+                        <a href="Account.aspx" class="guide-list-item-link" >
                             <span><asp:Image ID="AccountIcon" runat="server" ImageUrl="~/Img/account-icon/user.png" /></span>
                             <span>Account overview</span>
-                        </li>
-                    </asp:HyperLink>
+                        </a>
+                    </li>
 
-                    <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/MyOrders.aspx">
-                        <li class="guide-list-item">
+                    <li class="guide-list-item">
+                        <a href="MyOrders.aspx" class="guide-list-item-link" >
                             <span><asp:Image ID="OrderIcon" runat="server" ImageUrl="~/Img/account-icon/box.png" /></span>
-                            <span>My orders</span>      
-                        </li>
-                    </asp:HyperLink>
+                            <span>My orders</span>  
+                        </a>
+                    </li>
 
-                    <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/ChangePassword.aspx">
-                        <li class="guide-list-item">
+                    <li class="guide-list-item">
+                        <a href="ChangePassword.aspx" class="guide-list-item-link" >
                             <span><asp:Image ID="LockIcon" runat="server" ImageUrl="~/Img/account-icon/padlock.png" /></span>
-                            <span>Change password</span>      
-                        </li>
-                    </asp:HyperLink>
+                            <span>Change password</span>   
+                        </a>
+                    </li>
 
-                    <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/Homepage.aspx" >
-                        <li class="guide-list-item">
+                    <li class="guide-list-item">
+                        <a href="Homepage.aspx" class="guide-list-item-link" >
                             <span><asp:Image ID="Image1" runat="server" ImageUrl="~/Img/account-icon/log-out.png" /></span>
-                            <span>Sign out</span>      
-                        </li>
-                    </asp:HyperLink>
+                            <span>Sign out</span>   
+                        </a>
+                    </li>
                 </ul>
             </section>
         </section>
 
         <section class="right-content">
+            <%-- Javascript --%>
+            <script>
+                if (sessionStorage.getItem("activeTab") === undefined || sessionStorage.getItem("activeTab") === null || !sessionStorage.getItem("activeTab")) {
+                    sessionStorage.setItem("activeTab", 0);
+                }
+
+                const navListItems = document.querySelectorAll("li.guide-list-item");
+
+                navListItems.forEach((item, index) => {
+                    item.addEventListener('click', () => {
+                        sessionStorage.setItem("activeTab", index);
+                    });
+                })
+            </script>
+
             <asp:ContentPlaceHolder ID="AccountContent" runat="server"></asp:ContentPlaceHolder>
         </section>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server"></asp:SqlDataSource>
     </div>
+
+
+
 </asp:Content>
 
 

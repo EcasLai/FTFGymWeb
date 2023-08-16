@@ -267,15 +267,16 @@
     <%-----------------Home Page Cover Photo-----------------%>
     <section class ="homepage_image">
         <%--<asp:Image runat="server" ImageUrl="Img/HomePage/HomePage.jpg" ></asp:Image>--%>
-        <video controls autoplay muted>
-          <source src="Img/Homepage/homepage_video.mp4" type="video/mp4" >
-          <%--<source src="~/Img/Homepage/homepage_video.ogg" type="video/ogg">--%>
-        </video>
+        <video src="@Url.Content(Img/Homepage/homepage_video.mp4)" autoplay muted />
+         <%-- <source src="@Url.Content(Img/Homepage/homepage_video.mp4)" type="video/mp4" >
+          <source src="~/Img/Homepage/homepage_video.ogg" type="video/ogg">
+        </video>--%>
+        <asp:ListBox ID="ListBox1" runat="server"></asp:ListBox>
    
-        <div class="homepage_text">
+        <%--<div class="homepage_text">
             <h1>Stronger With Every Sweat Drop</h1>
             <a href="ClassList.aspx" class="button">DISCOVER MORE</a>
-        </div>
+        </div>--%>
     </section>
 
 <%---------------------------Fitness Class Content---------------------------%>

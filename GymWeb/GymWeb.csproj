@@ -65,11 +65,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Account.aspx" />
-    <Content Include="AccountOverview.aspx" />
     <Content Include="App_Data\FTFGym.mdf" />
     <Content Include="App_Data\FTFGym_log.ldf">
       <DependentUpon>FTFGym.mdf</DependentUpon>
     </Content>
+    <Content Include="ChangePassword.aspx" />
     <Content Include="ClassList.aspx" />
     <Content Include="Homepage.aspx" />
     <Content Include="Img\account.png" />
@@ -104,12 +104,12 @@
     <Compile Include="Account.master.designer.cs">
       <DependentUpon>Account.master</DependentUpon>
     </Compile>
-    <Compile Include="AccountOverview.aspx.cs">
-      <DependentUpon>AccountOverview.aspx</DependentUpon>
+    <Compile Include="ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="AccountOverview.aspx.designer.cs">
-      <DependentUpon>AccountOverview.aspx</DependentUpon>
+    <Compile Include="ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
     </Compile>
     <Compile Include="ClassList.aspx.cs">
       <DependentUpon>ClassList.aspx</DependentUpon>

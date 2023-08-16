@@ -24,7 +24,7 @@
         .right-content .form-input input[type="email"], 
         .right-content .form-input input[type="tel"] {
             height: 29px;
-            padding: 0 0.2rem;
+            padding: 0 0.4rem;
         }
 
          .right-content .form-input select {
@@ -93,19 +93,18 @@
             color: #ffffff;
         }
     </style>
-
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="AccountContent" runat="server">
   
         <h2 id="section-title">Account Overview</h2>
         <div class="form-input-row">
-            <div class="form-input form-input-short">
+            <div class="form-input">
                 <asp:Label ID="lblUsername" runat="server" Text="Username" ></asp:Label>
                 <asp:TextBox ID="txtUsername" runat="server" placeholder="Username" ReadOnly="true" Enabled="false"></asp:TextBox>
             </div>
 
-            <div class="form-input form-input-short">
+            <div class="form-input">
                 <asp:Label ID="lblFirstName" runat="server" Text="First Name"></asp:Label>
                 <asp:TextBox ID="txtFirstName" runat="server" placeholder="First Name"></asp:TextBox>
             </div>
@@ -151,4 +150,17 @@
         </div>
            
         <asp:SqlDataSource ID="SqlDataSource1" runat="server"></asp:SqlDataSource>
+
+        <%-- Javascript --%>
+        <script>
+            const activeTab = sessionStorage.getItem('activeTab');
+            // console.log(activeTab);
+            navListItems[activeTab].classList.add("active-item");
+
+            for (y = 0; y < navListItems.length; y++) {
+                if (navListItems[y] !== navListItems[activeTab]) {
+                    navListItems[y].classList.remove("active-item");
+                }
+            }
+        </script>
 </asp:Content>
