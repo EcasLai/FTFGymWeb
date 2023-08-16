@@ -482,6 +482,7 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <%-----------------Home Page Cover Photo-----------------%>
+
     <section class ="homepage_video">
         <div class="video1">
          
@@ -496,10 +497,10 @@
           <source src="~/Img/Homepage/homepage_video.ogg" type="video/ogg">
         </video>--%>
    
-        <div class="homepage_text">
+        <%--<div class="homepage_text">
             <h1>Stronger With Every Sweat Drop</h1>
             <a href="ClassList.aspx" class="button">DISCOVER MORE</a>
-        </div>
+        </div>--%>
     </section>
 
 <%---------------------------Fitness Class Content---------------------------%>

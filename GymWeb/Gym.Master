@@ -52,7 +52,7 @@
                     <li><a href="Homepage.aspx" class="nav-link" >Home</a></li>
                     <li><a href="#" class="nav-link">Product</a></li>
                     <li><a href="ClassList.aspx" class="nav-link">Class</a></li>
-                    <li><a href="Account.aspx" class="nav-link">Account</a></li>
+                    <li><a href="Account.aspx" class="nav-link" onclick="(function(){sessionStorage.setItem('activeTab', 0);})()">Account</a></li>
                 </ul>       
             </section>
         </nav>

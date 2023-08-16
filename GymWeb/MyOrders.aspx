@@ -38,6 +38,7 @@
         }
     </style>
 
+        
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="AccountContent" runat="server">
@@ -117,4 +118,18 @@
 
     <asp:Repeater ID="repOrder" runat="server" DataSourceID="SqlDataSource1"></asp:Repeater>
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [OrderId], [Status], [OrderDate] FROM [Order]"></asp:SqlDataSource>
+
+
+    <%-- Javascript --%>
+        <script>
+            const activeTab = sessionStorage.getItem('activeTab');
+
+            console.log(activeTab);
+            navListItems[activeTab].classList.add("active-item");
+            for (y = 0; y < navListItems.length; y++) {
+                if (navListItems[y] !== navListItems[activeTab]) {
+                    navListItems[y].classList.remove("active-item");
+                }
+            }
+        </script>
 </asp:Content>
