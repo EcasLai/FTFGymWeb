@@ -1,15 +1,18 @@
 ﻿<%@ Page Title="FTFGym" Language="C#" MasterPageFile="~/Gym.Master" AutoEventWireup="true" CodeBehind="Homepage.aspx.cs" Inherits="GymWeb.Homepage" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style>
-        .homepage_image video{
+
+/*---------------HomePage Video---------------*/
+        .homepage_video video{
         /* Add the blur effect */
             /*filter: blur(8px);
             -webkit-filter: blur(8px);*/
+            
             width: 100vw;
             max-width: 100%;
         }
 
-        .homepage_image{
+        .homepage_video{
            position: relative;
         }
 
@@ -18,7 +21,7 @@
           text-align: center;
           color: white;
           font-size: 35px;
-          top: 40%;
+          top: 60%;
           left: 50%;
           transform: translate(-50%, -50%);
         }
@@ -53,6 +56,7 @@
           background-color: #43AAE0;
         }
 
+/*---------------Fitness Classes---------------*/
         .fitness_content{
           background-color: rgba(248, 248, 248, 1);
           text-align: left;
@@ -85,7 +89,7 @@
           margin-top: 5vw;
           margin-right: 5vw;
         }
-        
+/*---------------Power Up Your Workouts---------------*/        
         .equipment{
           background-color: rgba(248, 248, 248, 1);
           position: relative;
@@ -153,6 +157,7 @@
           box-sizing: border-box;
        }*/
 
+/*---------------Categories---------------*/
        .category img{
            width: 300px;
            height:200px;
@@ -191,6 +196,7 @@
          flex-direction:row;
        }
 
+/*---------------About Us---------------*/
         .about_us {
           background-color: rgba(248, 248, 248, 1);
           text-align: left;
@@ -249,15 +255,226 @@
           line-height:1.8;
         }
 
-        .manufacturing{
-          position: relative;
-          width: 400px;
+        .manufacturing {
+            position: relative;
+            width: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            margin-left: 3vw;
+            padding-top: 3vw;
+            padding-bottom: 3vw;
+        }
+
+/*---------------Join Memmbership---------------*/
+        .join_member img{
+            width: 100vw;
+            max-width: 100%;
+        }
+
+        .join_member{
+           position: relative;
+        }
+
+        .membership{
+          position: absolute;
+          text-align: center;
+          color: white;
+          font-size: 35px;
+          top: 40%;
+          left: 35%;
+          transform: translate(-50%, -50%);
+        }
+        
+        .join_button {
+          font-size: 20px;
+          font-weight: bold;
+          padding-left: 30px;
+          padding-right: 30px;
+          border-radius: 3px;
+          color: #fff;
+          background-color: red;
+          border-color: red;
+          display: inline-block;
+          margin-bottom: 0;
+          text-align: center;
+          vertical-align: middle;
+          touch-action: manipulation;
+          cursor: pointer;
+          background-image: none;
+          border: 1px solid transparent;
+          white-space: nowrap;
+          padding: 3px 12px;
+          line-height: 1.73;
+          user-select: none;
+          text-decoration: none;
+        }
+        
+        .join_button:hover{
+          border: 1px solid darkred;
+          color: white;
+          background-color: darkred;
+        }
+
+/*---------------Footer---------------*/
+        /* Footer Left */
+        footer {
+          /* position: fixed; */
+          bottom: 0;
+          background-color: white;
+          box-shadow: 0px -4px 16px rgba(34, 34, 34, 0.12);
+          min-height: 16vh;
+          width: 100%;
+        }
+
+        .footer-top {
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+        }
+
+        .footer-left {
+          display: flex;
+          justify-content: flex-start;
+          align-items: flex-start;
+        }
+
+        .footer-left #newsletter-subscribe-wrapper {
+          margin-top: 15px;
+          padding: 10px;
+          padding-left: 6vw;
+          padding-right: 6vw;
+          padding-bottom: 20px;
+          border-right: 1px solid var(--div-grey);
+          flex-grow: 1;
+        }
+
+        #newsletter-subscribe-wrapper span,
+        #footer-logo {
+          color: var(--theme-red);
+        }
+
+        #newsletter-subscribe-wrapper label {
+          font-size: 18px;
+          font-weight: bold;
+        }
+
+        #newsletter-subscribe-wrapper form {
+          margin-top: 10px;
+        }
+
+        #newsletter-subscribe-wrapper form input {
+          line-height: 21px;
+          padding: 4px 5px;
+          font-size: 14px;
+          border-radius: 4px;
+          border: 2px solid rgb(235, 235, 235);
+          margin-right: 5px;
+          width: 205.83px;
+          outline: none;
+        }
+
+        #newsletter-subscribe-wrapper form input:placeholder-shown {
+          font-weight: bold;
+          font-size: 14px;
+        }
+
+        #newsletter-subscribe-wrapper form button {
+          line-height: 20px;
+          padding: 5px 5px;
+          border-radius: 4px;
+          border: 2px solid rgb(235, 235, 235);
+          font-weight: bold;
+          cursor: pointer;
+          transition: 0.2s;
+        }
+
+        #newsletter-subscribe-wrapper form button:disabled {
+          pointer-events: none;
+        }
+
+
+        .footer-mobile-bottom {
+          display: flex;
+          flex: 1;
+        }
+
+        /* Footer Social Media Part */
+        footer .footer-mobile-bottom .social-media-wrapper {
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-top: 20px;
+          padding-top: 10px;
+          padding-bottom: 20px;
+          border-right: 1px solid var(--div-grey);
+          flex-grow: 1;
+        }
+
+        .social-media-wrapper a i {
+          font-size: 1.5rem;
+          width: 40px;
+          height: 40px;
+          padding: 5px;
+          margin: 10px;
+          margin-top: 10px;
+          text-align: center;
+          line-height: 30px;
+          transition: 0.2s;
+        }
+
+        footer i:hover {
+          background-color: rgba(220, 220, 220, 0.5);
+          box-shadow: 0px 2px 8px rgba(34, 34, 34, 0.12);
+          border-radius: 50%;
+          color: var(--theme-red);
+          transform: translateY(-3px);
+        }
+
+        /* Footer Navigation Links */
+        footer .footer-mobile-bottom .footer-nav-wrapper {
           display: flex;
           flex-direction: column;
-          justify-content: flex-start;
-          margin-left: 3vw;
-          padding-top: 3vw;
-          padding-bottom: 3vw;
+          justify-content: center;
+          align-items: center;
+          padding-top: 25px;
+          flex-grow: 2;
+        }
+
+        .footer-navlink-links {
+          display: flex;
+        }
+
+        footer .footer-mobile-bottom .footer-nav-links h2 {
+          font-weight: bold;
+          font-size: 18px;
+        }
+
+        .footer-mobile-bottom .footer-navlink-links .footer-nav {
+          margin: 15px;
+          margin-top: 10px;
+          font-size: 16px;
+          font-weight: 500;
+        }
+
+        .footer-mobile-bottom .footer-navlink-links .footer-nav li a {
+          color: grey;
+        }
+
+        .footer-mobile-bottom .footer-navlink-links .footer-nav li a:hover {
+          color: var(--theme-red);
+        }
+
+        .footer-mobile-bottom .footer-navlink-links .footer-nav li a:active {
+          color: var(--theme-red);
+        }
+
+        #copyright {
+          display: block;
+          text-align: center;
+          font-weight: bold;
+          padding: 10px;
         }
 
     </style>
@@ -265,13 +482,20 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <%-----------------Home Page Cover Photo-----------------%>
-    <section class ="homepage_image">
-        <%--<asp:Image runat="server" ImageUrl="Img/HomePage/HomePage.jpg" ></asp:Image>--%>
-        <video src="@Url.Content(Img/Homepage/homepage_video.mp4)" autoplay muted />
-         <%-- <source src="@Url.Content(Img/Homepage/homepage_video.mp4)" type="video/mp4" >
+
+    <section class ="homepage_video">
+        <div class="video1">
+         
+            <video controls autoplay loop>
+                <source src="Media/fitness.mp4" type="video/mp4" />
+            </video>
+        </div>
+        
+        <%--<asp:Image runat="server" ImageUrl="Img/HomePage/HomePage.jpg" ></asp:Image>
+        <video controls autoplay loop>
+          <source src="Img/Homepage/homepage_video.mp4" type="video/mp4" >
           <source src="~/Img/Homepage/homepage_video.ogg" type="video/ogg">
         </video>--%>
-        <asp:ListBox ID="ListBox1" runat="server"></asp:ListBox>
    
         <%--<div class="homepage_text">
             <h1>Stronger With Every Sweat Drop</h1>
@@ -302,7 +526,7 @@
         <asp:Image runat="server" ImageUrl="Img/HomePage/running.jpg" ></asp:Image>
         <div class="equipment_layout">
             <h1>POWER UP YOUR WORKOUTS</h1>
-            <a href="https://www.ganas.com.cn/products" class="button_equipment">EMPOWER YOUR WORKOUT</a>
+            <a href="ProductList.aspx" class="button_equipment">EMPOWER YOUR WORKOUT</a>
 
         </div>
     </section>
@@ -315,7 +539,7 @@
 
         <div class="category_layout">
             <div class="treadmills">
-                <a href="https://www.technogym.com/my/products/shopby/product_type-treadmills.html">
+                <a href="ProductList.aspx">
                     <asp:Image runat="server" ImageUrl="Img/HomePage/treadmills.jpg" ></asp:Image>
                 </a>
 
@@ -325,7 +549,7 @@
             </div>
 
             <div class="bikes">
-                <a href="https://www.technogym.com/my/products/shopby/product_type-exercise_bikes.html">
+                <a href="ProductList.aspx">
                     <asp:Image runat="server" ImageUrl="Img/HomePage/bikes.jpg" ></asp:Image>
                 </a>
             <div class="category_name">
@@ -334,7 +558,7 @@
             </div>
 
             <div class="multistations">
-                <a href="https://www.technogym.com/my/products/shopby/product_type-multigyms.html">
+                <a href="ProductList.aspx">
                     <asp:Image runat="server" ImageUrl="Img/HomePage/multistation.jpg" ></asp:Image>
                 </a>
                 
@@ -344,7 +568,7 @@
             </div>
 
             <div class="accessories">
-                <a href="https://www.technogym.com/my/products/shopby/product_type-exercise_tools.html">
+                <a href="ProductList.aspx">
                     <asp:Image runat="server" ImageUrl="Img/HomePage/accessories.jpg" ></asp:Image>
                 </a>
                 
@@ -359,7 +583,7 @@
     <section class="about_us">
        <%-- <asp:Image runat="server" ImageUrl="Img/HomePage/worldmap.png" ></asp:Image>--%>
         <div class="about_content1">
-            <h1>WHY CHOOSE FTF</h1>
+            <h1>WHY CHOOSE FTF GYM</h1>
             <h2>We Have Full-Fledged Manufacturing Resource</h2>
             <p>With With the 7D & 24H service principle, FTF has exported to more than 100 countries since 2010, 
                 and has enlarged the factory to 30,000 square meters.
@@ -368,7 +592,7 @@
             <p>
                 Our projects truly do range from A to Z. From major commercial gyms, fitness clubs, to government 
                 gym projects, to hotel gyms, to company staff gyms, to distributors and retailers who need gym equipment, 
-                FTF has enjoyed a partnership relationship with all of them.
+                FTF Gym has enjoyed a partnership relationship with all of them.
             </p>
             <br />
             <p>
@@ -390,10 +614,70 @@
 
         <div class="about_content2">
             <h2>15 Complicated Procedures Strictly Production</h2>
-            <p>FTF from the selection of materiasl there are 15 complicated procedures strictly production, 360 degrees without dead angle
+            <p>FTF Gym from the selection of materiasl there are 15 complicated procedures strictly production, 360 degrees without dead angle
                 polishing, covering every line of the display cabinet, craftsmanship hand polishing excellence, even the smallest details 
                 are never perfunctory.
             </p>
         </div>
     </section>
+
+<%---------------------------Join Member---------------------------%>
+    <section class="join_member">
+            <asp:Image runat="server" ImageUrl="Img/dumbbell.jpg" ></asp:Image>
+
+        <div class="membership">
+            <h1>TAKE YOUR FITNESS LEVEL TO THE NEXT</h1>
+            <a href="ClassList.aspx" class="join_button">JOIN US NOW</a>
+        </div>
+    </section>
+
+<%---------------------------Footer Navigation---------------------------%>
+    <footer>
+      <div class="footer-top">
+          <div class="footer-left">
+              <div id="newsletter-subscribe-wrapper">
+                  <label for="subscribe-email"><span class="highlight">Subscribe</span> to our Newsletter</label>
+                  <form method="post" action="" id="email-sub-form">
+                      <input type="email" name="email" id="subscribe-email" placeholder="example@email.com">
+                      <button id="subscribe-btn" disabled>Register</button>
+                  </form>
+                  <!-- <div class="modal" id="email-sub-modal">
+                  <span class="loadingBox" id="email-sub-modal-loading"></span>
+                  </div> -->
+              </div>
+          </div>
+
+          <div class="div-line"></div>
+
+          <div class="footer-mobile-bottom">
+              <div class="social-media-wrapper">
+                  <a href="https://www.facebook.com/JLWSports-Malaysia-105062048849157"><i class="fab fa-facebook-f"></i></a>
+                  <a href="https://www.instagram.com/jlwsportsmalaysia/"><i class="fa-brands fa-instagram"></i></a>
+                  <a href="https://twitter.com/jlwsportsmy"><i class="fab fa-twitter"></i></a>
+              </div>
+  
+      
+              <div class="footer-nav-wrapper">
+                  <h2 id="footer-navLinks">Navigation Links</h2>
+                  <ul class="footer-navlink-links">
+                      <div class="footer-nav">
+                          <li><a href="Homepage.aspx">Home</a></li>
+                          <li><a href="ProductList.aspx">Product</a></li>     
+                      </div>
+                      <div class="footer-nav">
+                          <li><a href="ClassList.aspx">Classes</a></li>
+                          <li><a href="Account.aspx">Account</a></li>
+                      </div>
+                      
+                      <div class="footer-nav">
+                      </div>
+                  </ul>
+              </div>
+          </div>
+      </div>
+      
+      <p id="copyright">Copyright &copy 2022 <span id="footer-logo">FTF GYM</span></p>
+      <p id="copyright">This website is for EDUCATIONAL PURPOSE only</p>
+  </footer>
+
 </asp:Content>

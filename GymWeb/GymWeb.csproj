@@ -73,20 +73,26 @@
     <Content Include="ClassList.aspx" />
     <Content Include="Homepage.aspx" />
     <Content Include="Img\account.png" />
+
     <Content Include="Img\ClassList\classBg.jpg" />
     <Content Include="Img\ClassList\classBg2.jpg" />
     <Content Include="Img\ClassList\classVertical1.jpg" />
     <Content Include="Img\ClassList\classVertical2.jpg" />
+    <Content Include="Img\account-icon\box.png" />
+    <Content Include="Img\dumbbell.jpg" />
     <Content Include="Img\GymLogo.png" />
     <Content Include="Img\account-icon\log-out.png" />
     <Content Include="Img\Logo %28transparent%29.png" />
     <Content Include="Img\Logo.png" />
     <Content Include="Img\account-icon\padlock.png" />
     <Content Include="Img\account-icon\user.png" />
+    <Content Include="Media\fitness.mp4" />
+    <Content Include="Media\Promo.mp4" />
     <Content Include="MyOrders.aspx" />
     <Content Include="ProductList.aspx" />
     <Content Include="script\Account.js" />
     <Content Include="Style\master.css" />
+    <Content Include="video.mp4" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
