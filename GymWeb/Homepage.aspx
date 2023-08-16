@@ -1,4 +1,4 @@
-﻿<%@ Page Title="FTFGym" Language="C#" MasterPageFile="~/Gym.Master" AutoEventWireup="true" CodeBehind="Homepage.aspx.cs" Inherits="GymWeb.Homepage" %>
+﻿<%@ Page Title="FTF Gym Web" Language="C#" MasterPageFile="~/Gym.Master" AutoEventWireup="true" CodeBehind="Homepage.aspx.cs" Inherits="GymWeb.Homepage" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style>
 
@@ -486,7 +486,7 @@
     <section class ="homepage_video">
         <div class="video1">
          
-            <video controls autoplay loop>
+            <video autoplay muted loop>
                 <source src="Media/fitness.mp4" type="video/mp4" />
             </video>
         </div>
@@ -497,10 +497,10 @@
           <source src="~/Img/Homepage/homepage_video.ogg" type="video/ogg">
         </video>--%>
    
-        <%--<div class="homepage_text">
+        <div class="homepage_text">
             <h1>Stronger With Every Sweat Drop</h1>
             <a href="ClassList.aspx" class="button">DISCOVER MORE</a>
-        </div>--%>
+        </div>
     </section>
 
 <%---------------------------Fitness Class Content---------------------------%>

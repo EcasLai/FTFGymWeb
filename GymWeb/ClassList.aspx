@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/Gym.Master" AutoEventWireup="true" CodeBehind="ClassList.aspx.cs" Inherits="GymWeb.ClassList" %>
+﻿<%@ Page Language="C#" Title="'Class | FTF Gym Web" MasterPageFile="~/Gym.Master" AutoEventWireup="true" CodeBehind="ClassList.aspx.cs" Inherits="GymWeb.ClassList" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 
