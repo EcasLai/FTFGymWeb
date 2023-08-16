@@ -94,6 +94,8 @@
         }
     </style>
 
+    
+
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="AccountContent" runat="server">
@@ -151,4 +153,17 @@
         </div>
            
         <asp:SqlDataSource ID="SqlDataSource1" runat="server"></asp:SqlDataSource>
+
+        <%-- Javascript --%>
+        <script>
+            const activeTab = localStorage.getItem('activeTab');
+            // console.log(activeTab);
+            navListItems[activeTab].classList.add("active-item");
+
+            for (y = 0; y < navListItems.length; y++) {
+                if (navListItems[y] !== navListItems[activeTab]) {
+                    navListItems[y].classList.remove("active-item");
+                }
+            }
+        </script>
 </asp:Content>
