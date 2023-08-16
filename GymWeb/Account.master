@@ -153,7 +153,7 @@
                     </li>
 
                     <li class="guide-list-item">
-                        <a href="Homepage.aspx" class="guide-list-item-link" >
+                        <a href="Homepage.aspx" class="guide-list-item-link" onclick="(function(){alert('Signed out!')})()" >
                             <span><asp:Image ID="Image1" runat="server" ImageUrl="~/Img/account-icon/log-out.png" /></span>
                             <span>Sign out</span>   
                         </a>

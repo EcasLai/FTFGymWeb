@@ -73,7 +73,6 @@
     <Content Include="ClassList.aspx" />
     <Content Include="Homepage.aspx" />
     <Content Include="Img\account.png" />
-
     <Content Include="Img\ClassList\classBg.jpg" />
     <Content Include="Img\ClassList\classBg2.jpg" />
     <Content Include="Img\ClassList\classVertical1.jpg" />
@@ -91,6 +90,9 @@
     <Content Include="MyOrders.aspx" />
     <Content Include="ProductList.aspx" />
     <Content Include="script\Account.js" />
+    <Content Include="script\ChangePassword.js" />
+    <Content Include="script\Homepage.js" />
+    <Content Include="Style\homepage.css" />
     <Content Include="Style\master.css" />
     <Content Include="video.mp4" />
     <Content Include="Web.config" />
