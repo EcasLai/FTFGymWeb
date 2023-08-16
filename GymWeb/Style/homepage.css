@@ -41,7 +41,7 @@
     padding-right: 30px;
     border-radius: 3px;
     color: rgb(246 246 246);
-    background-color: var(--theme-yellow);
+    background-color: var(--theme-red);
     border-color: #43AAE0;
     display: inline-block;
     margin-bottom: 0;
@@ -59,9 +59,9 @@
 }
 
     .button:hover {
-        border: 1px solid var(--theme-yellow-dark);
+        border: 1px solid var(--theme-red-dark);
         color: white;
-        background-color: var(--theme-yellow-dark);
+        background-color: var(--theme-red-dark);
     }
 
 /*---------------Fitness Classes---------------*/
