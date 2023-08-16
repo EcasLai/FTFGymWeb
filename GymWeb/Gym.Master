@@ -1,38 +1,69 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Gym.master.cs" Inherits="GymWeb.Gym" %>
 
 <!DOCTYPE html>
-
 <html>
 <head runat="server">
     <title></title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
+
+    <!-- Favicon Configuration -->
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#000000">
+
+    <!-- Linking Stylesheet -->
+    <link href="Style/master.css?Version=1" rel="stylesheet" type="text/css" runat="server" />
+
+    <!-- Javascript Functions -->
+    <SCRIPT language=Javascript>
+      function isNumberKey(evt)
+      {
+         var charCode = (evt.which) ? evt.which : evt.keyCode;
+         if (charCode > 31 && (charCode < 48 || charCode > 57))
+            return false;    
+         return true;
+      }
+    </SCRIPT>
 </head>
 <body>
     <form id="form1" runat="server">
-        <div style="height: 362px">
-            <asp:Image ID="LogoImg" runat="server" Height="95px" Width="140px" src="img/GymLogo.png"/>
-            <br />
-            <asp:SiteMapPath ID="SiteMapPath1" runat="server">
-            </asp:SiteMapPath>
-            <br />
-            <br />
-            <asp:Menu ID="Menu1" runat="server" BackColor="#F7F6F3" DataSourceID="SiteMapDataSource" DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="0.8em" ForeColor="#7C6F57" OnMenuItemClick="Menu1_MenuItemClick" StaticSubMenuIndent="10px">
-                <DynamicHoverStyle BackColor="#7C6F57" ForeColor="White" />
-                <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
-                <DynamicMenuStyle BackColor="#F7F6F3" />
-                <DynamicSelectedStyle BackColor="#5D7B9D" />
-                <StaticHoverStyle BackColor="#7C6F57" ForeColor="White" />
-                <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
-                <StaticSelectedStyle BackColor="#5D7B9D" />
-            </asp:Menu>
+        <nav>
+            <section class="nav-left">
+                <a href="Homepage.aspx" id="logo">
+                    <asp:Image ID="logoImg" runat="server" src="img/Logo (transparent).png" />
+                    <h1>FTFGym</h1>
+                </a>
+                
+               <!-- <asp:SiteMapPath ID="SiteMapPath1" runat="server" Font-Names="Verdana" Font-Size="0.8em" PathSeparator=" : ">
+                    <CurrentNodeStyle ForeColor="#333333" />
+                    <NodeStyle Font-Bold="True" ForeColor="#666666"  Font-Underline="false" />
+                    <PathSeparatorStyle Font-Bold="True" ForeColor="#1C5E55" />
+                    <RootNodeStyle Font-Bold="True" ForeColor="#1C5E55" Font-Underline="false" />
+                </asp:SiteMapPath> -->
+            </section>
+            
+            <section class="nav-right">
+                <ul class="menu-list">
+                    <li><a href="Homepage.aspx" class="nav-link" >Home</a></li>
+                    <li><a href="#" class="nav-link">Product</a></li>
+                    <li><a href="ClassList.aspx" class="nav-link">Class</a></li>
+                    <li><a href="Account.aspx" class="nav-link">Account</a></li>
+                </ul>       
+            </section>
+        </nav>
+
+        <section>
             <asp:SiteMapDataSource ID="SiteMapDataSource" runat="server" />
             <br />
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-                <br />
-                <br />
+
             </asp:ContentPlaceHolder>
-        </div>
+        </section>
     </form>
 </body>
 </html>
