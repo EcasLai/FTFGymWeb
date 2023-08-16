@@ -122,7 +122,7 @@
 
     <%-- Javascript --%>
         <script>
-            const activeTab = localStorage.getItem('activeTab');
+            const activeTab = sessionStorage.getItem('activeTab');
 
             console.log(activeTab);
             navListItems[activeTab].classList.add("active-item");

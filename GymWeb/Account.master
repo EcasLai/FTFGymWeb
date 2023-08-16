@@ -101,6 +101,7 @@
             justify-content: center;
             align-items: center;
             padding: 2rem 10%;
+            padding-bottom: 4rem;
             background-color: #ffffff;
             color: black;
         }
@@ -163,11 +164,15 @@
         <section class="right-content">
             <%-- Javascript --%>
             <script>
+                if (sessionStorage.getItem("activeTab") === undefined || sessionStorage.getItem("activeTab") === null || !sessionStorage.getItem("activeTab")) {
+                    sessionStorage.setItem("activeTab", 0);
+                }
+
                 const navListItems = document.querySelectorAll("li.guide-list-item");
 
                 navListItems.forEach((item, index) => {
                     item.addEventListener('click', () => {
-                        localStorage.setItem("activeTab", index);
+                        sessionStorage.setItem("activeTab", index);
                     });
                 })
             </script>
