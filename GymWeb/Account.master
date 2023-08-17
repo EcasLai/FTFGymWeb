@@ -25,7 +25,7 @@
             flex-direction: row;
             justify-content: center;
             align-items: center;
-            padding: 2rem 0;
+            padding: 2rem 1rem;
             background-color: #ffffff;
             border-radius: 0.5rem;
         }

@@ -1,139 +1,8 @@
-﻿<%@ Page Language="C#" Title="'Class | FTF Gym Web" MasterPageFile="~/Gym.Master" AutoEventWireup="true" CodeBehind="ClassList.aspx.cs" Inherits="GymWeb.ClassList" %>
+﻿<%@ Page Language="C#" Title="Class | FTF Gym Web" MasterPageFile="~/Gym.Master" AutoEventWireup="true" CodeBehind="ClassList.aspx.cs" Inherits="GymWeb.ClassList" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 
-    <style>
-    html {
-        scroll-behavior: smooth;
-    }
-
-    body{
-        font-size: 16px;
-        font-family: Arial, Verdana;
-    }
-
-    .btn-Class{
-        width: 150px;  
-        height: 50px;
-        background-color: gold;
-    }
-
-    .btn-Class:hover{
-        background-color: darkgoldenrod;
-        color: black;
-        transition-duration: 0.3s;
-        opacity:0.8;
-    }
-
-    .btn-subClass{
-        width: 150px;  
-        height: 50px;
-        border: 2px solid whitesmoke; 
-        color: whitesmoke;
-        background-color: transparent;
-    }
-
-    .btn-subClass:hover{
-        background-color: whitesmoke;
-        color: black;
-        border: 2px solid whitesmoke; 
-        transition-duration: 0.3s;
-        opacity:0.6
-    }
-
-    .container{
-        text-align: center;
-        padding: 10%;
-        position: relative;
-    }
-
-    .fill-form{
-        float:left;
-        width: 65%;
-        height: 600px;
-        display: block;
-        text-align: left;
-        box-sizing: border-box;
-        padding: 2%;     
-    }
-
-    .fill-form-support{
-        float:right;
-        width: 35%;
-        height: 500px;
-    }
-
-    .fill-form-support > img{
-        object-fit: cover;
-        filter:grayscale(50%) brightness(80%);
-        width: 100%;
-        height: 100%;
-    }
-
-    .container-textImg{
-        position: relative;
-        text-align: center;
-        color: white;
-        height: 600px;
-    }
-
-    .container-textImg img{
-        object-fit: cover;
-        filter: brightness(30%);   
-        width: 100%;
-        height: 100%;
-    }
-
-    .container-textImg .centered{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-
-    .container-textImg .top-left{
-        position: absolute;
-        text-align:left;
-        top: 20%;
-        left: 5%;
-        width: 40%;
-    }
-
-    .container-textImg .selNav{
-        position: absolute;
-        text-align: left;
-        float: right;
-        top: 35%;
-        right: 5%;
-        width: 250px;
-        height: 350px;
-        background-color: white;
-        border-radius: 10px;
-        opacity: 0.9;
-    }
-
-    table {
-         border-collapse:separate; 
-         border-spacing: 0 1em;
-    }
-
-    .tablist{
-        list-style-type: none;
-        margin: 8px;
-    }
-
-    .tablist li{
-        padding: 25px 0 25px 0;
-        font-size: 1.2rem;
-        width: 100%;
-    }
-
-    .td-firstCol {
-         width: 100px;
-         font-weight:bold;
-    }
-
-    </style>
+    <link href="Style/classList.css" rel="stylesheet" />
 
 </asp:Content>
 
@@ -225,6 +94,7 @@
                 </tr>
             </table>
 
+            <asp:Button CssClass="btn-Class" ID="Button3" runat="server" Text="Submit" />
         </div>
 
         <div class="fill-form-support">

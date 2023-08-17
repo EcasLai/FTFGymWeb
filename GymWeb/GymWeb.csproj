@@ -85,15 +85,26 @@
     <Content Include="Img\Logo.png" />
     <Content Include="Img\account-icon\padlock.png" />
     <Content Include="Img\account-icon\user.png" />
+    <Content Include="Img\product\Men%27s%281%29.jpg" />
+    <Content Include="Img\product\Men%27s%282%29.jpg" />
+    <Content Include="Img\product\Men%27s%283%29.jpg" />
+    <Content Include="Img\product\productLogo.jpg" />
+    <Content Include="Img\product\Women%27s%281%29.jpg" />
+    <Content Include="Img\product\Women%27s%282%29.jpg" />
+    <Content Include="Img\product\Women%27s%283%29.jpg" />
     <Content Include="Media\fitness.mp4" />
     <Content Include="Media\Promo.mp4" />
     <Content Include="MyOrders.aspx" />
+    <Content Include="ProductDetail.aspx" />
     <Content Include="ProductList.aspx" />
     <Content Include="script\Account.js" />
     <Content Include="script\ChangePassword.js" />
     <Content Include="script\Homepage.js" />
+    <Content Include="Style\classList.css" />
     <Content Include="Style\homepage.css" />
     <Content Include="Style\master.css" />
+    <Content Include="Style\productDetail.css" />
+    <Content Include="Style\productList.css" />
     <Content Include="video.mp4" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -146,6 +157,13 @@
     </Compile>
     <Compile Include="MyOrders.aspx.designer.cs">
       <DependentUpon>MyOrders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductDetail.aspx.cs">
+      <DependentUpon>ProductDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductDetail.aspx.designer.cs">
+      <DependentUpon>ProductDetail.aspx</DependentUpon>
     </Compile>
     <Compile Include="ProductList.aspx.cs">
       <DependentUpon>ProductList.aspx</DependentUpon>
