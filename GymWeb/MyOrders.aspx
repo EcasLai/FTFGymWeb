@@ -42,7 +42,9 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="AccountContent" runat="server">
-    <h2>My Orders</h2>
+
+    <h2>My Orders
+    </h2>
 
     <div class="order-list-container">
         <div class="order-item">
@@ -117,7 +119,7 @@
     </div>
 
     <asp:Repeater ID="repOrder" runat="server" DataSourceID="SqlDataSource1"></asp:Repeater>
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [OrderId], [Status], [OrderDate] FROM [Order]"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [OrderId], [Status], [OrderDate], [Total] FROM [Order] WHERE CustomerId = [CustomerId]"></asp:SqlDataSource>
 
 
     <%-- Javascript --%>
