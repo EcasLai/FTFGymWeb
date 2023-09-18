@@ -39,7 +39,6 @@
 
     .board{
         width: 100%;
-        height: 400px;
         padding: 0px 10px;
         background: #fff;
         overflow: auto;
@@ -111,14 +110,40 @@
     }
 
     .delete a{
-    text-decoration: none;
-    font-size: 14px;
-    color: #ff0000;
-    font-weight: 600;
+        text-decoration: none;
+        font-size: 14px;
+        color: #ff0000;
+        font-weight: 600;
     }
 
+     .addButton {
+        display: block;
+        width: 25vw;
+     }
 
+     .addButton  {
+         margin-left: 520px;
+         margin-right:520px;
+         margin-top: 70px;
+         margin-bottom: 70px;
+         padding: 0.8rem 1.8rem;
+/*       display: inline;
+*/ 
+     }
 
+     .add-button {
+         margin: 0 1rem;
+         padding: 0.8rem 1.5rem;
+         border-radius: 0.3rem;
+         font-size: 1rem;
+         font-weight: 600;
+         cursor: pointer;
+         transition: all 0.3s ease-in-out;
+     }
+
+     .add-button:hover {
+         transform: translateY(2px);
+     }
 </style>
 </asp:Content>
 
@@ -170,9 +195,10 @@
 
                         <td class="edit"><a href="#">Edit</a></td>
                         <td class="delete"><a href="#">Delete</a></td>
-
+                </tr>
 
                   <%---------------------------Trainer 2 Data---------------------------%>
+                    <tr>
                         <td class="people">
                             <asp:Image runat="server" ImageUrl="Img/Trainer/Trainer2.jpg" ></asp:Image>
                             <div class="people-de">
@@ -193,8 +219,10 @@
 
                         <td class="edit"><a href="#">Edit</a></td>
                         <td class="delete"><a href="#">Delete</a></td>
+                  </tr> 
 
                   <%---------------------------Trainer 3 Data---------------------------%>
+                    <tr>
                         <td class="people">
                             <asp:Image runat="server" ImageUrl="Img/Trainer/Trainer3.png" ></asp:Image>
                             <div class="people-de">
@@ -215,8 +243,10 @@
 
                         <td class="edit"><a href="#">Edit</a></td>
                         <td class="delete"><a href="#">Delete</a></td>
+                    </tr>
 
                   <%---------------------------Trainer 4 Data---------------------------%>
+                    <tr>
                         <td class="people">
                             <asp:Image runat="server" ImageUrl="Img/Trainer/Trainer4.jpg" ></asp:Image>
                             <div class="people-de">
@@ -237,8 +267,10 @@
 
                         <td class="edit"><a href="#">Edit</a></td>
                         <td class="delete"><a href="#">Delete</a></td>
+                    </tr>
 
                   <%---------------------------Trainer 5 Data---------------------------%>
+                    <tr>
                         <td class="people">
                             <asp:Image runat="server" ImageUrl="Img/Trainer/Trainer5.jpg" ></asp:Image>
                             <div class="people-de">
@@ -263,9 +295,12 @@
                     </tr>
                 </tbody>
             </table>
+                    <div class="addButton">
+                        
+                        <button class="add-button">Add Trainer</button>
+                        
+                    </div>
         </dir>
     </section>
-
-<%---------------------------CRUD Trainers---------------------------%>
 
 </asp:Content>

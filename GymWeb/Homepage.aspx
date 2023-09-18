@@ -536,7 +536,7 @@
     </section>
 
 <%--<%--<%--<%--<%---------------------------Categories Section---------------------------%>
-<%--    Treadmills Image URL: https://www.technogym.com/wpress/wp-content/uploads/2018/10/treadmills_03-1.jpg
+<%--Treadmills Image URL: https://www.technogym.com/wpress/wp-content/uploads/2018/10/treadmills_03-1.jpg
     Bikes Image URL: https://www.technogym.com/wpress/wp-content/uploads/2020/11/bikes_03.jpg
     Multistation Image URL: https://www.technogym.com/wpress/wp-content/uploads/2018/10/multistation_03-2.jpg
     Accessories Image URL: https://www.technogym.com/wpress/wp-content/uploads/2020/11/tools_01.jpg--%>

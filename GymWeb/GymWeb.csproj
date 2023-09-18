@@ -65,6 +65,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Account.aspx" />
+    <Content Include="AddTrainer.aspx" />
     <Content Include="App_Data\FTFGym.mdf" />
     <Content Include="App_Data\FTFGym_log.ldf">
       <DependentUpon>FTFGym.mdf</DependentUpon>
@@ -85,6 +86,8 @@
     <Content Include="Img\Logo.png" />
     <Content Include="Img\account-icon\padlock.png" />
     <Content Include="Img\account-icon\user.png" />
+    <Content Include="Img\Trainer\background.jpg" />
+    <Content Include="Img\Trainer\backgroundImg.jpg" />
     <Content Include="Img\Trainer\Trainer1.jpg" />
     <Content Include="Img\Trainer\Trainer2.jpg" />
     <Content Include="Img\Trainer\Trainer3.png" />
@@ -114,6 +117,13 @@
     </Compile>
     <Compile Include="Account.master.designer.cs">
       <DependentUpon>Account.master</DependentUpon>
+    </Compile>
+    <Compile Include="AddTrainer.aspx.cs">
+      <DependentUpon>AddTrainer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddTrainer.aspx.designer.cs">
+      <DependentUpon>AddTrainer.aspx</DependentUpon>
     </Compile>
     <Compile Include="ChangePassword.aspx.cs">
       <DependentUpon>ChangePassword.aspx</DependentUpon>
