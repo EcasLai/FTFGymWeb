@@ -73,7 +73,6 @@
     <Content Include="ClassList.aspx" />
     <Content Include="Homepage.aspx" />
     <Content Include="Img\account.png" />
-
     <Content Include="Img\ClassList\classBg.jpg" />
     <Content Include="Img\ClassList\classBg2.jpg" />
     <Content Include="Img\ClassList\classVertical1.jpg" />
@@ -86,12 +85,18 @@
     <Content Include="Img\Logo.png" />
     <Content Include="Img\account-icon\padlock.png" />
     <Content Include="Img\account-icon\user.png" />
+    <Content Include="Img\Trainer\Trainer1.jpg" />
+    <Content Include="Img\Trainer\Trainer2.jpg" />
+    <Content Include="Img\Trainer\Trainer3.png" />
+    <Content Include="Img\Trainer\Trainer4.jpg" />
+    <Content Include="Img\Trainer\Trainer5.jpg" />
     <Content Include="Media\fitness.mp4" />
     <Content Include="Media\Promo.mp4" />
     <Content Include="MyOrders.aspx" />
     <Content Include="ProductList.aspx" />
     <Content Include="script\Account.js" />
     <Content Include="Style\master.css" />
+    <Content Include="Trainers.aspx" />
     <Content Include="video.mp4" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -153,11 +158,19 @@
       <DependentUpon>ProductList.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Trainers.aspx.cs">
+      <DependentUpon>Trainers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Trainers.aspx.designer.cs">
+      <DependentUpon>Trainers.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Gym.Master" />
     <Content Include="web.sitemap" />
     <Content Include="Account.master" />
+    <Content Include="libman.json" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
