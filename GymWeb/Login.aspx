@@ -27,6 +27,7 @@
             top: 0; left: 0;
             width: 100%; height: 91vh;
             background-image: url("Img/Login/login_background.jpg");
+            /* reference: https://www.istockphoto.com/photo/athletic-woman-doing-the-full-body-cardio-workout-gm1289416200-385101996?phrase=gym */
             background-size: cover;
         }
 
