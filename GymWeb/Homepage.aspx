@@ -10,7 +10,8 @@
     <section class ="homepage_video">
         <div class="video1">
          
-            <video autoplay muted loop>
+          <%--Video Source URL: https://www.pexels.com/video/sport-training-workout-boxer-4754038/--%>
+            <video controls autoplay loop>
                 <source src="Media/fitness.mp4" type="video/mp4" />
             </video>
         </div>
@@ -40,12 +41,15 @@
             popular classes, as it offers benefits for just about everyone, regardless of their fitness goals.
             </p>
         </div>
+
+<%--        Image URL: https://lh3.googleusercontent.com/mJHkLVWNAxikTgy9QpE3RO10kCytYy2xqCZvey7Sy8AKb_kqrEqAputZGtmfyJeu7gMRnVtyk-bpOmWQw8PLUOb5KDLO-CPFZPDb68Ah--%>
             <div class ="trainer_image">
                 <asp:Image runat="server" ImageUrl="Img/HomePage/trainer.jpg" ></asp:Image>
             </div>
      </section>
 
 <%---------------------------Browse Product Page---------------------------%>
+<%--    Image URL: https://olimpsport.com/media/mageplaza/blog/post/image//w/y/wyprobuj-5-najlepszych-cwiczen-cardio-na-silowni_5.jpg--%>
     <section class="equipment">
         <asp:Image runat="server" ImageUrl="Img/HomePage/running.jpg" ></asp:Image>
         <div class="equipment_layout">
@@ -56,6 +60,11 @@
     </section>
 
 <%--<%--<%--<%--<%---------------------------Categories Section---------------------------%>
+<%--Treadmills Image URL: https://www.technogym.com/wpress/wp-content/uploads/2018/10/treadmills_03-1.jpg
+    Bikes Image URL: https://www.technogym.com/wpress/wp-content/uploads/2020/11/bikes_03.jpg
+    Multistation Image URL: https://www.technogym.com/wpress/wp-content/uploads/2018/10/multistation_03-2.jpg
+    Accessories Image URL: https://www.technogym.com/wpress/wp-content/uploads/2020/11/tools_01.jpg--%>
+
     <section class="category">
         <div class="category_title">
             <h1>Categories</h1>
@@ -125,12 +134,14 @@
             </p>
         </div>
 
+<%--        Gym Room Image URL: https://lh3.googleusercontent.com/TPHg4Gc5ad4fGku4Etf32nOVRvszu1svJ42eXwMnzhu9RncrXtUXIbILRwmtPhdHmCSRpbW3Rz7aBZ8-BGzJi63XJrjlDXahMcUQJdiq--%>
         <div class ="gym_room">
                 <asp:Image runat="server" ImageUrl="Img/HomePage/gym_room.jpg" ></asp:Image>
             </div>
     </section>
 
 <%---------------------------About Us 2---------------------------%>
+<%--    Manufacturing Image URL: https://img001.video2b.com/1961/file_41680144773616.jpg--%>
     <section class="about_us2">
          <div class ="manufacturing">
                 <asp:Image runat="server" ImageUrl="Img/HomePage/manufacturing.jpg" ></asp:Image>
@@ -146,6 +157,7 @@
     </section>
 
 <%---------------------------Join Member---------------------------%>
+<%--    Image URL: https://www.vecteezy.com/photo/2029070-man-holding-a-dumbbell-in-a-gym-with-row-of-dumbbells-in-the-background--%>
     <section class="join_member">
             <asp:Image runat="server" ImageUrl="Img/dumbbell.jpg" ></asp:Image>
 
