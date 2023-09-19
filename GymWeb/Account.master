@@ -125,7 +125,9 @@
                 <asp:Image runat="server" ImageUrl="Img/account.png" ></asp:Image>
                 <div>
                     <span>Hi, </span>
-                    <span id="user-fullname">John Newman</span>  
+                    <span id="user-fullname">
+                        <asp:LoginName ID="AccountLoginName" runat="server" />
+                    </span>  
                 </div>
             </section>
             
