@@ -1,13 +1,8 @@
-﻿<%@ Page Title="FTFGym" Language="C#" MasterPageFile="~/Gym.Master" AutoEventWireup="true" CodeBehind="Homepage.aspx.cs" Inherits="GymWeb.Homepage" %>
+﻿<%@ Page Title="FTFGym" Language="C#" MasterPageFile="~/Gym.Master" AutoEventWireup="true" CodeBehind="Trainers.aspx.cs" Inherits="GymWeb.Trainers" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-<style>
-/*
-    *{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }*/
+    <style>
+
 
     .sidenav {
       width: 160px;
@@ -119,6 +114,9 @@
      .addButton {
         display: block;
         width: 25vw;
+        outline:none;
+        border:none;
+        text-decoration: none;
      }
 
      .addButton  {
@@ -127,8 +125,6 @@
          margin-top: 70px;
          margin-bottom: 70px;
          padding: 0.8rem 1.8rem;
-/*       display: inline;
-*/ 
      }
 
      .add-button {
@@ -164,7 +160,7 @@
                 <thead>
                     <tr>
                         <td>Name</td>
-                        <td>Title</td>
+                        <td>Phone Number</td>
                         <td>Status</td>
                         <td>Joined Date</td>
                         <td></td>
@@ -183,8 +179,8 @@
                             </div>
                         </td>
 
-                        <td class="people-des">
-                            <h5>Body Building and Powerlifting</h5>
+                        <td class="phoneTrainer">
+                            <h5>+60135987468</h5>
                         </td>
 
                         <td class="active"><p>Active</p></td>
@@ -207,8 +203,8 @@
                             </div>
                         </td>
 
-                        <td class="people-des">
-                            <h5>Cardio Training</h5>
+                        <td class="phoneTrainer">
+                            <h5>+60123456789</h5>
                         </td>
 
                         <td class="active"><p>Active</p></td>
@@ -231,8 +227,8 @@
                             </div>
                         </td>
 
-                        <td class="people-des">
-                            <h5>Strength Training</h5>
+                        <td class="phoneTrainer">
+                            <h5>+60198761352</h5>
                         </td>
 
                         <td class="active"><p>Active</p></td>
@@ -255,8 +251,8 @@
                             </div>
                         </td>
 
-                        <td class="people-des">
-                            <h5>Lifestyle Coach</h5>
+                        <td class="phoneTrainer">
+                            <h5>+60183229766</h5>
                         </td>
 
                         <td class="active"><p>Active</p></td>
@@ -279,8 +275,8 @@
                             </div>
                         </td>
 
-                        <td class="people-des">
-                            <h5>Sports Coach</h5>
+                        <td class="phoneTrainer">
+                            <h5>+60184886327</h5>
                         </td>
 
                         <td class="active"><p>Active</p></td>
@@ -297,10 +293,9 @@
             </table>
                     <div class="addButton">
                         
-                        <button class="add-button">Add Trainer</button>
+                        <button class="add-button"><a href="AddTrainer.aspx">Add Trainer</a></button>
                         
                     </div>
         </dir>
     </section>
-
 </asp:Content>
