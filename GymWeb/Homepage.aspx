@@ -374,7 +374,7 @@
           outline: none;
         }
 
-        #newsletter-subscribe-wrapper form input:placeholder-shown {
+        #newsletter-subscribe-wrapper form input::placeholder {
           font-weight: bold;
           font-size: 14px;
         }

@@ -1,8 +1,100 @@
-﻿<%@ Page Title="FTFGym" Language="C#" MasterPageFile="~/Gym.Master" AutoEventWireup="true" CodeBehind="Trainers.aspx.cs" Inherits="GymWeb.Trainers" %>
+﻿<%@ Page Title="Trainers | ADMIN" Language="C#" MasterPageFile="~/Gym.Master" AutoEventWireup="true" CodeBehind="Trainers.aspx.cs" Inherits="GymWeb.Trainers" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style>
+        .trainers{
+            position:relative;
+            margin-top: 100px;
+            margin-bottom: 100px;
+            margin-left: 100px;
+            margin-right: 100px;
+            font-size:larger;
+        }
 
+        .trainers Columns{
+            margin-top: 100px;
+            margin-bottom: 100px;
+            margin-left: 100px;
+            margin-right: 100px;
+        }
+        
+        .trainers-grid {
+            border-collapse: collapse;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+            border: none;
+            margin: auto;
+        }
+
+        .trainers-grid, tr, td, th {
+            padding: 10px;
+            margin: auto;
+            border: none;
+
+        }
+
+        .trainers-grid tbody tr {
+            border-bottom: 1px solid #dddddd;
+        }
+
+        .trainers-grid tbody tr th {
+            background-color: #e2cc4e;
+            color: #f3f3f3;
+        }
+
+        .trainers-grid th,
+        .trainers-grid td {
+            padding: 1rem 0.8rem;
+        }
+
+        /* Even row */
+        .trainers-grid tbody tr:nth-of-type(even) {
+            background-color: #f3f3f3;
+        }
+
+        .trainers-grid tbody tr:last-of-type {
+            border-bottom: 2px solid #e2cc4e !important;
+        }
+
+        .trainers-grid td a:first-child {
+            text-decoration: none;
+            color: #e2cc4e;
+            margin-right: 0.2rem;
+        }
+
+        .trainers-grid td a:last-child {
+            text-decoration: none;
+            color: #c30032;
+        }
+
+
+        /*.trainers-grid tbody tr:first-child th:first-child {
+            border: 1px solid black;
+            border-radius: 0.5rem 0 0 0;
+        }
+
+        .trainers-grid tbody tr:first-child th:last-child {*/
+            /* Right Top Corner */
+            /*border: 1px solid black;
+            border-radius: 0 0.5rem 0 0;
+        }
+
+        .trainers-grid tbody tr:last-child td:first-child {*/
+            /* Left Bottom Corner */
+            /*border: 1px solid black;
+            border-radius: 0 0 0 0.5rem !important;
+        }
+
+        .trainers-grid tbody tr:last-child td:last-child {*/
+            /* Right Bottom Corner */
+            /*border: 1px solid black;
+            border-radius: 0 0 0.5rem 0 !important;
+        }*/
+
+
+
+
+
+/*
 
     .sidenav {
       width: 160px;
@@ -139,7 +231,7 @@
 
      .add-button:hover {
          transform: translateY(2px);
-     }
+     }*/
 </style>
 </asp:Content>
 
@@ -147,14 +239,58 @@
 
 <%---------------------------Trainer Dashboard Page---------------------------%>
 
-    <div class="sidenav">
+<%--    <div class="sidenav">
       <a href="#product">Products</a>
       <a href="#classes">Classes</a>
       <a href="#trainers">Trainers</a>
       <a href="#orders">Orders</a>
-    </div>
+    </div>--%>
 
-    <section class="trainerBoard">
+<div class="trainers">
+    <asp:GridView ID="gridTrainers" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" DataKeyNames="ID" CssClass="trainers-grid" AllowPaging="True">
+        <Columns>
+            <asp:BoundField DataField="ID" HeaderText="ID" SortExpression="ID" InsertVisible="False" ReadOnly="True" />
+            <asp:BoundField DataField="First Name" HeaderText="First Name" SortExpression="First Name" />
+            <asp:BoundField DataField="Last Name" HeaderText="Last Name" SortExpression="Last Name" />
+            <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email" />
+            <asp:BoundField DataField="Phone Number" HeaderText="Phone Number" SortExpression="Phone Number" ReadOnly="True" />
+            <asp:BoundField DataField="Joined Date" HeaderText="Joined Date" SortExpression="Joined Date" />
+            <asp:BoundField DataField="Image" HeaderText="Image" SortExpression="Image">
+            <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" />
+            </asp:BoundField>
+            <asp:ImageField DataImageUrlField="Image">
+                <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" />
+            </asp:ImageField>
+        </Columns>
+    </asp:GridView>
+
+    <br />
+
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT Trainer.TrainerId as ID, Trainer.First_Name as &quot;First Name&quot;, Trainer.Last_Name as &quot;Last Name&quot;, Trainer.Email, Trainer.Country_Calling_Code + Trainer.Phone_Number as &quot;Phone Number&quot;, Trainer.Joined_Date as &quot;Joined Date&quot;, Trainer.Image_Name as Image FROM [Trainer]" DeleteCommand="DELETE FROM [Trainer] WHERE [TrainerId] = @TrainerId" InsertCommand="INSERT INTO [Trainer] ([First_Name], [Last_Name], [Email], [Country_Calling_Code], [Phone_Number], [Joined_Date]) VALUES (@First_Name, @Last_Name, @Email, @Country_Calling_Code, @Phone_Number, @Joined_Date)" UpdateCommand="UPDATE [Trainer] SET [First_Name] = @First_Name, [Last_Name] = @Last_Name, [Email] = @Email, [Country_Calling_Code] = @Country_Calling_Code, [Phone_Number] = @Phone_Number, [Joined_Date] = @Joined_Date WHERE [TrainerId] = @TrainerId">
+        <DeleteParameters>
+            <asp:Parameter Name="TrainerId" Type="Int32" />
+        </DeleteParameters>
+        <InsertParameters>
+            <asp:Parameter Name="First_Name" Type="String" />
+            <asp:Parameter Name="Last_Name" Type="String" />
+            <asp:Parameter Name="Email" Type="String" />
+            <asp:Parameter Name="Country_Calling_Code" Type="String" />
+            <asp:Parameter Name="Phone_Number" Type="String" />
+            <asp:Parameter Name="Joined_Date" Type="String" />
+        </InsertParameters>
+        <UpdateParameters>
+            <asp:Parameter Name="First_Name" Type="String" />
+            <asp:Parameter Name="Last_Name" Type="String" />
+            <asp:Parameter Name="Email" Type="String" />
+            <asp:Parameter Name="Country_Calling_Code" Type="String" />
+            <asp:Parameter Name="Phone_Number" Type="String" />
+            <asp:Parameter Name="Joined_Date" Type="String" />
+            <asp:Parameter Name="TrainerId" Type="Int32" />
+        </UpdateParameters>
+    </asp:SqlDataSource>
+</div>
+
+<%--    <section class="trainerBoard">
         <dir class="board">
             <table width="100%">
                 <thead>
@@ -166,12 +302,12 @@
                         <td></td>
                         <td></td>
                     </tr>
-                </thead>
+                </thead>--%>
 
-                <tbody>
-                    <tr>
+                <%--<tbody>
+                    <tr>--%>
                   <%---------------------------Trainer 1 Data---------------------------%>
-                        <td class="people">
+                        <%--<td class="people">
                             <asp:Image runat="server" ImageUrl="Img/Trainer/Trainer1.jpg" ></asp:Image>
                             <div class="people-de">
                                 <h5>Gordon Cena</h5>
@@ -191,10 +327,10 @@
 
                         <td class="edit"><a href="#">Edit</a></td>
                         <td class="delete"><a href="#">Delete</a></td>
-                </tr>
+                </tr>--%>
 
                   <%---------------------------Trainer 2 Data---------------------------%>
-                    <tr>
+                   <%-- <tr>
                         <td class="people">
                             <asp:Image runat="server" ImageUrl="Img/Trainer/Trainer2.jpg" ></asp:Image>
                             <div class="people-de">
@@ -215,10 +351,10 @@
 
                         <td class="edit"><a href="#">Edit</a></td>
                         <td class="delete"><a href="#">Delete</a></td>
-                  </tr> 
+                  </tr> --%>
 
                   <%---------------------------Trainer 3 Data---------------------------%>
-                    <tr>
+                    <%--<tr>
                         <td class="people">
                             <asp:Image runat="server" ImageUrl="Img/Trainer/Trainer3.png" ></asp:Image>
                             <div class="people-de">
@@ -239,10 +375,10 @@
 
                         <td class="edit"><a href="#">Edit</a></td>
                         <td class="delete"><a href="#">Delete</a></td>
-                    </tr>
+                    </tr>--%>
 
                   <%---------------------------Trainer 4 Data---------------------------%>
-                    <tr>
+                    <%--<tr>
                         <td class="people">
                             <asp:Image runat="server" ImageUrl="Img/Trainer/Trainer4.jpg" ></asp:Image>
                             <div class="people-de">
@@ -263,10 +399,10 @@
 
                         <td class="edit"><a href="#">Edit</a></td>
                         <td class="delete"><a href="#">Delete</a></td>
-                    </tr>
+                    </tr>--%>
 
                   <%---------------------------Trainer 5 Data---------------------------%>
-                    <tr>
+                    <%--<tr>
                         <td class="people">
                             <asp:Image runat="server" ImageUrl="Img/Trainer/Trainer5.jpg" ></asp:Image>
                             <div class="people-de">
@@ -297,5 +433,5 @@
                         
                     </div>
         </dir>
-    </section>
+    </section>--%>
 </asp:Content>
