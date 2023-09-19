@@ -1,0 +1,30 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminHome.master.cs" Inherits="GymWeb.Admin.AdminHome" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <nav>
+            <ul>
+                <li><asp:HyperLink NavigateUrl="~/Admin/AdminHome.aspx" runat="server">Home</asp:HyperLink></li>
+                <li><asp:HyperLink NavigateUrl="~/Admin/ViewClass.aspx" runat="server">Class</asp:HyperLink></li>
+                <li><asp:HyperLink NavigateUrl="~/Admin/ViewProduct.aspx" runat="server">Product</asp:HyperLink></li>
+                <li><asp:HyperLink NavigateUrl="~/Admin/ViewUser.aspx" runat="server">User</asp:HyperLink></li>
+                    
+                
+            </ul>
+        </nav>
+
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolderBody" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
