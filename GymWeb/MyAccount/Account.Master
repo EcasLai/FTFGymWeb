@@ -1,0 +1,10 @@
+﻿<%@ Master Language="C#" MasterPageFile="../Gym.Master" AutoEventWireup="true" CodeBehind="Account.Master.cs" Inherits="GymWeb.MyAccount.MyAccount" %>
+<%@ MasterType VirtualPath="../Gym.Master" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+  
+
+
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    
+</asp:Content>
