@@ -4,7 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="ProductBackgroundImage">
-        <img src="Img/product/productLogo.jpg" alt="productLogo" width="100%" height="600">
+        <asp:Image runat="server" ImageUrl="Img/product/productLogo.jpg" />
     </div>
 
     <div class="ProductText">

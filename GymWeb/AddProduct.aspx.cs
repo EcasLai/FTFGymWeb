@@ -13,5 +13,19 @@ namespace GymWeb
         {
 
         }
+
+        public void Unnamed_InsertItem()
+        {
+            Models.Product item = new Models.Product();
+            TryUpdateModel(item);
+            if (ModelState.IsValid)
+            {
+                // Save changes here
+                Models.FTFGymEntities1 _pd = new Models.FTFGymEntities1();
+                _pd.Products.Add(item);
+                _pd.SaveChanges();
+                Response.Redirect("/ViewProduct.aspx");
+            }
+        }
     }
 }
