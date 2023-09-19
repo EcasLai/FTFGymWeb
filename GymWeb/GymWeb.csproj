@@ -30,7 +30,7 @@
     <OutputPath>bin\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
+    <WarningLevel>0</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -73,6 +73,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Account.aspx" />
+    <Content Include="AddTrainer.aspx" />
     <Content Include="Admin\AddProduct.aspx" />
     <Content Include="Admin\Home.aspx" />
     <Content Include="App_Data\FTFGym.mdf" />
@@ -95,6 +96,13 @@
     <Content Include="Img\Logo.png" />
     <Content Include="Img\account-icon\padlock.png" />
     <Content Include="Img\account-icon\user.png" />
+    <Content Include="Img\Trainer\background.jpg" />
+    <Content Include="Img\Trainer\backgroundImg.jpg" />
+    <Content Include="Img\Trainer\Trainer1.jpg" />
+    <Content Include="Img\Trainer\Trainer2.jpg" />
+    <Content Include="Img\Trainer\Trainer3.png" />
+    <Content Include="Img\Trainer\Trainer4.jpg" />
+    <Content Include="Img\Trainer\Trainer5.jpg" />
     <Content Include="Img\product\Men%27s%281%29.jpg" />
     <Content Include="Img\product\Men%27s%282%29.jpg" />
     <Content Include="Img\product\Men%27s%283%29.jpg" />
@@ -123,6 +131,7 @@
     <Content Include="Style\classList.css" />
     <Content Include="Style\homepage.css" />
     <Content Include="Style\master.css" />
+    <Content Include="Trainers.aspx" />
     <Content Include="Style\productDetail.css" />
     <Content Include="Style\productList.css" />
     <Content Include="video.mp4" />
@@ -144,6 +153,12 @@
     <Compile Include="Account.master.designer.cs">
       <DependentUpon>Account.master</DependentUpon>
     </Compile>
+    <Compile Include="AddTrainer.aspx.cs">
+      <DependentUpon>AddTrainer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddTrainer.aspx.designer.cs">
+      <DependentUpon>AddTrainer.aspx</DependentUpon>
     <Compile Include="Admin\AddProduct.aspx.cs">
       <DependentUpon>AddProduct.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -233,6 +248,12 @@
       <DependentUpon>ProductList.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Trainers.aspx.cs">
+      <DependentUpon>Trainers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Trainers.aspx.designer.cs">
+      <DependentUpon>Trainers.aspx</DependentUpon>
     <Compile Include="Admin\ViewProduct.aspx.cs">
       <DependentUpon>ViewProduct.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -245,6 +266,7 @@
     <Content Include="Gym.Master" />
     <Content Include="web.sitemap" />
     <Content Include="Account.master" />
+    <Content Include="libman.json" />
     <EntityDeploy Include="Models\Product.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Product.Designer.cs</LastGenOutput>
