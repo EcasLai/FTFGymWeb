@@ -5,13 +5,13 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace GymWeb
+namespace GymWeb.Admin
 {
-    public partial class ProductList : System.Web.UI.Page
+    public partial class AdminHome : System.Web.UI.MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+
         }
     }
 }

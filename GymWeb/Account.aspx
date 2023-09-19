@@ -106,38 +106,38 @@
 
             <div class="form-input">
                 <asp:Label ID="lblFirstName" runat="server" Text="First Name"></asp:Label>
-                <asp:TextBox ID="txtFirstName" runat="server" placeholder="First Name"></asp:TextBox>
+                <asp:TextBox ID="txtFirstName" runat="server" placeholder="First Name" ReadOnly="true" Enabled="false"></asp:TextBox>
             </div>
         </div>
             
         <div class="form-input">
             <asp:Label ID="lblLastName" runat="server" Text="Last Name"></asp:Label>
-            <asp:TextBox ID="txtLastName" runat="server" placeholder="Last Name"></asp:TextBox>
+            <asp:TextBox ID="txtLastName" runat="server" placeholder="Last Name" ReadOnly="true" Enabled="false"></asp:TextBox>
         </div>
 
         <div class="form-input">
             <asp:Label ID="lblEmail" runat="server" Text="Email"></asp:Label>
-            <asp:TextBox ID="txtEmail" runat="server" TextMode="Email" placeholder="example@email.com"></asp:TextBox>
+            <asp:TextBox ID="txtEmail" runat="server" TextMode="Email" placeholder="example@email.com" ReadOnly="true" Enabled="false"></asp:TextBox>
         </div>
 
         <div class="form-input">
-            <asp:Label ID="lblPhoneNumber" runat="server" Text="Phone Number"></asp:Label>
+            <asp:Label ID="lblPhoneNumber" runat="server" Text="Phone Number" ReadOnly="true" Enabled="false"></asp:Label>
             <div>
-                <asp:DropDownList ID="ddlCountryCode" runat="server">
+                <asp:DropDownList ID="ddlCountryCode" runat="server" ReadOnly="true" Enabled="false">
                     <asp:ListItem>+60</asp:ListItem>    
                     <asp:ListItem>+65</asp:ListItem>    
                     <asp:ListItem>+886</asp:ListItem>   
                 </asp:DropDownList>
-                <asp:TextBox ID="txtPhoneNumber" runat="server" TextMode="Phone" onkeypress="return isNumberKey(event)"></asp:TextBox>
+                <asp:TextBox ID="txtPhoneNumber" runat="server" TextMode="Phone" onkeypress="return isNumberKey(event)" ReadOnly="true" Enabled="false"></asp:TextBox>
             </div>
                
         </div>
             
         <div class="form-input">
-            <asp:Label ID="lblGender" runat="server" Text="Gender"></asp:Label>
-            <asp:RadioButton ID="rbGenderMale" runat="server" Text="Male" GroupName="gender" CssClass="gender-radio" />
-            <asp:RadioButton ID="rbGenderFemale" runat="server" Text="Female" GroupName="gender" CssClass="gender-radio" />
-            <asp:RadioButton ID="rbGenderNone" runat="server" Text="Prefer not to say" GroupName="gender" CssClass="gender-radio" />
+            <asp:Label ID="lblGender" runat="server" Text="Gender" ></asp:Label>
+            <asp:RadioButton ID="rbGenderMale" runat="server" Text="Male" GroupName="gender" CssClass="gender-radio" ReadOnly="true" Enabled="false" />
+            <asp:RadioButton ID="rbGenderFemale" runat="server" Text="Female" GroupName="gender" CssClass="gender-radio" ReadOnly="true" Enabled="false" />
+            <asp:RadioButton ID="rbGenderNone" runat="server" Text="Prefer not to say" GroupName="gender" CssClass="gender-radio" ReadOnly="true" Enabled="false" />
         </div>
             
         <%--<div  class="form-button-group-edit">

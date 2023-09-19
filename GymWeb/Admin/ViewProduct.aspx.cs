@@ -7,11 +7,16 @@ using System.Web.UI.WebControls;
 
 namespace GymWeb
 {
-    public partial class ProductList : System.Web.UI.Page
+    public partial class ViewProduct : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+
+        }
+
+        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

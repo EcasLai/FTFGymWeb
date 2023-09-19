@@ -1,4 +1,4 @@
-﻿<%@ Page Title="FTFGym" Language="C#" MasterPageFile="~/Gym.Master" AutoEventWireup="true" CodeBehind="Homepage.aspx.cs" Inherits="GymWeb.Homepage" %>
+﻿<%@ Page Title="FTF Gym Web" Language="C#" MasterPageFile="~/Gym.Master" AutoEventWireup="true" CodeBehind="Homepage.aspx.cs" Inherits="GymWeb.Homepage" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style>
 
@@ -498,10 +498,10 @@
           <source src="~/Img/Homepage/homepage_video.ogg" type="video/ogg">
         </video>--%>
    
-        <%--<div class="homepage_text">
+        <div class="homepage_text">
             <h1>Stronger With Every Sweat Drop</h1>
             <a href="ClassList.aspx" class="button">DISCOVER MORE</a>
-        </div>--%>
+        </div>
     </section>
 
 <%---------------------------Fitness Class Content---------------------------%>
@@ -649,10 +649,10 @@
           <div class="footer-left">
               <div id="newsletter-subscribe-wrapper">
                   <label for="subscribe-email"><span class="highlight">Subscribe</span> to our Newsletter</label>
-                  <form method="post" action="" id="email-sub-form">
+                  <div id="email-sub-form">
                       <input type="email" name="email" id="subscribe-email" placeholder="example@email.com">
                       <button id="subscribe-btn" disabled>Register</button>
-                  </form>
+                  </div>
                   <!-- <div class="modal" id="email-sub-modal">
                   <span class="loadingBox" id="email-sub-modal-loading"></span>
                   </div> -->
@@ -660,36 +660,24 @@
           </div>
 
           <div class="div-line"></div>
-
           <div class="footer-mobile-bottom">
-              <div class="social-media-wrapper">
-                  <a href="https://www.facebook.com/JLWSports-Malaysia-105062048849157"><i class="fab fa-facebook-f"></i></a>
-                  <a href="https://www.instagram.com/jlwsportsmalaysia/"><i class="fa-brands fa-instagram"></i></a>
-                  <a href="https://twitter.com/jlwsportsmy"><i class="fab fa-twitter"></i></a>
-              </div>
-  
-      
               <div class="footer-nav-wrapper">
                   <h2 id="footer-navLinks">Navigation Links</h2>
                   <ul class="footer-navlink-links">
-                      <div class="footer-nav">
-                          <li><a href="Homepage.aspx">Home</a></li>
-                          <li><a href="ProductList.aspx">Product</a></li>     
-                      </div>
-                      <div class="footer-nav">
-                          <li><a href="ClassList.aspx">Classes</a></li>
-                          <li><a href="Account.aspx">Account</a></li>
-                      </div>
-                      
-                      <div class="footer-nav">
-                      </div>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="ProductList.aspx">Product</a></li>     
+                        <li><a href="ClassList.aspx">Classes</a></li>
+                        <li><a href="Account.aspx">Account</a></li>
                   </ul>
               </div>
           </div>
       </div>
       
-      <p id="copyright">Copyright &copy 2022 <span id="footer-logo">FTF GYM</span></p>
-      <p id="copyright">This website is for EDUCATIONAL PURPOSE only</p>
+      <p class="copyright">Copyright &copy 2023 <span id="footer-logo">FTF GYM</span></p>
+      <p class="copyright">This website is for EDUCATIONAL PURPOSE only</p>
   </footer>
 
+
+    <%-- Javascript --%>
+    <script src="script/Homepage.js" defer ></script>
 </asp:Content>

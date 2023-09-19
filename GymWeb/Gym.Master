@@ -34,7 +34,7 @@
     <form id="form1" runat="server">
         <nav>
             <section class="nav-left">
-                <a href="Homepage.aspx" id="logo">
+                <a href="/" id="logo">
                     <asp:Image ID="logoImg" runat="server" src="img/Logo (transparent).png" />
                     <h1>FTFGym</h1>
                 </a>
@@ -49,8 +49,8 @@
             
             <section class="nav-right">
                 <ul class="menu-list">
-                    <li><a href="Homepage.aspx" class="nav-link" >Home</a></li>
-                    <li><a href="#" class="nav-link">Product</a></li>
+                    <li><a href="/" class="nav-link" >Home</a></li>
+                    <li><a href="ProductList.aspx" class="nav-link">Product</a></li>
                     <li><a href="ClassList.aspx" class="nav-link">Class</a></li>
                     <li><a href="Account.aspx" class="nav-link" onclick="(function(){sessionStorage.setItem('activeTab', 0);})()">Account</a></li>
                 </ul>       
@@ -59,7 +59,6 @@
 
         <section>
             <asp:SiteMapDataSource ID="SiteMapDataSource" runat="server" />
-            
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
 
             </asp:ContentPlaceHolder>
