@@ -296,7 +296,8 @@
     </Compile>
     <Compile Include="Trainers.aspx.designer.cs">
       <DependentUpon>Trainers.aspx</DependentUpon>
-    </Compile>
+      </Compile>
+
     <Compile Include="Admin\ViewProduct.aspx.cs">
       <DependentUpon>ViewProduct.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

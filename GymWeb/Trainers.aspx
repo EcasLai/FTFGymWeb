@@ -247,7 +247,7 @@
     </div>--%>
 
 <div class="trainers">
-    <asp:GridView ID="gridTrainers" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" DataKeyNames="ID" CssClass="trainers-grid" AllowPaging="True">
+    <asp:GridView ID="gridTrainers" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" DataKeyNames="ID" CssClass="trainers-grid" AllowPaging="True" OnSelectedIndexChanged="gridTrainers_SelectedIndexChanged">
         <Columns>
             <asp:BoundField DataField="ID" HeaderText="ID" SortExpression="ID" InsertVisible="False" ReadOnly="True" />
             <asp:BoundField DataField="First Name" HeaderText="First Name" SortExpression="First Name" />
@@ -255,12 +255,9 @@
             <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email" />
             <asp:BoundField DataField="Phone Number" HeaderText="Phone Number" SortExpression="Phone Number" ReadOnly="True" />
             <asp:BoundField DataField="Joined Date" HeaderText="Joined Date" SortExpression="Joined Date" />
-            <asp:BoundField DataField="Image" HeaderText="Image" SortExpression="Image">
-            <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" />
-            </asp:BoundField>
             <asp:ImageField DataImageUrlField="Image">
-                <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" />
             </asp:ImageField>
+            <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
         </Columns>
     </asp:GridView>
 

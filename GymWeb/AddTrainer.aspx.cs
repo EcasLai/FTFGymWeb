@@ -122,5 +122,10 @@ namespace GymWeb
                 }
             }
         }
+
+        protected void txtPhoneNumber_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
