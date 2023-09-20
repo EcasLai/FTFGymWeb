@@ -33,6 +33,10 @@ namespace GymWeb
                 con.Open();
                 cmd.ExecuteNonQuery();
                 con.Close();
+
+
+                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('User Created Successfully!')", true);
+                Response.Redirect("Homepage.aspx");
             }
         }
     }

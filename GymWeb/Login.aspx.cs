@@ -25,10 +25,21 @@ namespace GymWeb
                 cmd.Parameters.AddWithValue("@email", txtEmail.Text);
                 cmd.Parameters.AddWithValue("@password", txtPassword.Text);
 
+                con.Open();
                 int count = Convert.ToInt32(cmd.ExecuteScalar());
-                if(count == 1)
+                con.Close();
+                if (count == 1)
                 {
-                    Session["email"] = txtEmail.Text.Trim();
+                    HttpCookie emailCookie = new HttpCookie("email");
+                    DateTime now = DateTime.Now;
+
+                    // Set the cookie value.
+                    emailCookie.Value = txtEmail.Text;
+                    // Set the cookie expiration date.
+                    emailCookie.Expires = now.AddDays(30);
+
+                    // Add the cookie.
+                    Response.Cookies.Add(emailCookie);
                     Response.Redirect("Homepage.aspx");
                 }
                 else
