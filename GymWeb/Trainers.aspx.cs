@@ -13,5 +13,10 @@ namespace GymWeb
         {
 
         }
+
+        protected void gridTrainers_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

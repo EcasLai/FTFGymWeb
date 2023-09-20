@@ -160,6 +160,7 @@
     </Compile>
     <Compile Include="AddTrainer.aspx.designer.cs">
       <DependentUpon>AddTrainer.aspx</DependentUpon>
+      </Compile>
     <Compile Include="Admin\AddProduct.aspx.cs">
       <DependentUpon>AddProduct.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -255,6 +256,7 @@
     </Compile>
     <Compile Include="Trainers.aspx.designer.cs">
       <DependentUpon>Trainers.aspx</DependentUpon>
+      </Compile>
     <Compile Include="Admin\ViewProduct.aspx.cs">
       <DependentUpon>ViewProduct.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
