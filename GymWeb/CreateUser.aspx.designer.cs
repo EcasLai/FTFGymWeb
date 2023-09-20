@@ -11,93 +11,88 @@ namespace GymWeb
 {
 
 
-    public partial class Account1
+    public partial class CreateUser
     {
 
         /// <summary>
-        /// AccountHead control.
+        /// LogoIcon control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder AccountHead;
+        protected global::System.Web.UI.WebControls.Image LogoIcon;
 
         /// <summary>
-        /// AccountLoginName control.
+        /// lblEmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LoginName AccountLoginName;
+        protected global::System.Web.UI.WebControls.Label lblEmail;
 
         /// <summary>
-        /// AccountIcon control.
+        /// txtEmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image AccountIcon;
+        protected global::System.Web.UI.WebControls.TextBox txtEmail;
 
         /// <summary>
-        /// OrderIcon control.
+        /// lblPwd control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image OrderIcon;
+        protected global::System.Web.UI.WebControls.Label lblPwd;
 
         /// <summary>
-        /// LockIcon control.
+        /// txtPassword control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image LockIcon;
+        protected global::System.Web.UI.WebControls.TextBox txtPassword;
 
         /// <summary>
-        /// Image1 control.
+        /// Label1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image Image1;
+        protected global::System.Web.UI.WebControls.Label Label1;
 
         /// <summary>
-        /// AccountContent control.
+        /// txtRePwd control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder AccountContent;
+        protected global::System.Web.UI.WebControls.TextBox txtRePwd;
 
         /// <summary>
-        /// SqlDataSource1 control.
+        /// btnSignIn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
+        protected global::System.Web.UI.WebControls.Button btnSignIn;
 
         /// <summary>
-        /// Master property.
+        /// NavLoginLink control.
         /// </summary>
         /// <remarks>
-        /// Auto-generated property.
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        public new GymWeb.Gym Master
-        {
-            get
-            {
-                return ((GymWeb.Gym)(base.Master));
-            }
-        }
+        protected global::System.Web.UI.WebControls.HyperLink NavLoginLink;
     }
 }
