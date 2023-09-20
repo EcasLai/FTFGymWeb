@@ -21,6 +21,15 @@
 
     <!-- Javascript Functions -->
     <SCRIPT language=Javascript>
+        function checkIsLoggedIn() {
+            const accountNav = document.getElementById("account-nav");
+
+            let userEmail = '<%=Session["email"] %>';
+            if (!userEmail || userEmail === undefined) {
+                accountNav.style.display = "none";
+            }
+        }
+
       function isNumberKey(evt)
       {
          var charCode = (evt.which) ? evt.which : evt.keyCode;
@@ -52,7 +61,7 @@
                     <li><a href="/" class="nav-link" >Home</a></li>
                     <li><a href="ProductList.aspx" class="nav-link">Product</a></li>
                     <li><a href="ClassList.aspx" class="nav-link">Class</a></li>
-                    <li><a href="Account.aspx" class="nav-link" onclick="(function(){sessionStorage.setItem('activeTab', 0);})()">Account</a></li>
+                    <li><a href="Account.aspx" class="nav-link" id="account-nav" onclick="(function(){sessionStorage.setItem('activeTab', 0);})()">Account</a></li>
                 </ul>       
             </section>
         </nav>
