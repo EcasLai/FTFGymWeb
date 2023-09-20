@@ -72,6 +72,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Admin\AddWorkoutClass.aspx" />
     <Content Include="CreateUser.aspx" />
     <Content Include="Img\account-icon\hide.png" />
     <Content Include="Img\account-icon\show.png" />
@@ -104,6 +105,7 @@
     <Content Include="Img\account-icon\user.png" />
     <Content Include="Img\Trainer\background.jpg" />
     <Content Include="Img\Trainer\backgroundImg.jpg" />
+    <Content Include="Img\Trainer\default.png" />
     <Content Include="Img\Trainer\Trainer1.jpg" />
     <Content Include="Img\Trainer\Trainer2.jpg" />
     <Content Include="Img\Trainer\Trainer3.png" />
@@ -166,6 +168,13 @@
     </Compile>
     <Compile Include="Admin\AddProduct.aspx.designer.cs">
       <DependentUpon>AddProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AddWorkoutClass.aspx.cs">
+      <DependentUpon>AddWorkoutClass.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AddWorkoutClass.aspx.designer.cs">
+      <DependentUpon>AddWorkoutClass.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
