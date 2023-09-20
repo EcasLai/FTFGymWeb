@@ -102,6 +102,7 @@
     <Content Include="Img\account-icon\user.png" />
     <Content Include="Img\Trainer\background.jpg" />
     <Content Include="Img\Trainer\backgroundImg.jpg" />
+    <Content Include="Img\Trainer\default.png" />
     <Content Include="Img\Trainer\Trainer1.jpg" />
     <Content Include="Img\Trainer\Trainer2.jpg" />
     <Content Include="Img\Trainer\Trainer3.png" />
@@ -295,7 +296,8 @@
     </Compile>
     <Compile Include="Trainers.aspx.designer.cs">
       <DependentUpon>Trainers.aspx</DependentUpon>
-    </Compile>
+      </Compile>
+
     <Compile Include="Admin\ViewProduct.aspx.cs">
       <DependentUpon>ViewProduct.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
