@@ -1,7 +1,483 @@
 ﻿<%@ Page Title="FTF Gym Web" Language="C#" MasterPageFile="~/Gym.Master" AutoEventWireup="true" CodeBehind="Homepage.aspx.cs" Inherits="GymWeb.Homepage" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <!-- Linking Stylesheet -->
-    <link href="Style/homepage.css?Version=1" rel="stylesheet" type="text/css" runat="server" />
+    <style>
+
+/*---------------HomePage Video---------------*/
+        .homepage_video video{
+        /* Add the blur effect */
+            /*filter: blur(8px);
+            -webkit-filter: blur(8px);*/
+            
+            width: 100vw;
+            max-width: 100%;
+        }
+
+        .homepage_video{
+           position: relative;
+        }
+
+        .homepage_text{
+          position: absolute;
+          text-align: center;
+          color: white;
+          font-size: 35px;
+          top: 60%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+        
+        .button {
+          font-size: 20px;
+          font-weight: bold;
+          padding-left: 30px;
+          padding-right: 30px;
+          border-radius: 3px;
+          color: #fff;
+          background-color: #43AAE0;
+          border-color: #43AAE0;
+          display: inline-block;
+          margin-bottom: 0;
+          text-align: center;
+          vertical-align: middle;
+          touch-action: manipulation;
+          cursor: pointer;
+          background-image: none;
+          border: 1px solid transparent;
+          white-space: nowrap;
+          padding: 3px 12px;
+          line-height: 1.73;
+          user-select: none;
+          text-decoration: none;
+        }
+
+        .button:hover{
+          border: 1px solid #43AAE0;
+          color: black;
+          background-color: #43AAE0;
+        }
+
+/*---------------Fitness Classes---------------*/
+        .fitness_content{
+          background-color: rgba(248, 248, 248, 1);
+          text-align: left;
+          display: flex;
+          flex-direction: row;
+        }
+
+        .fitness_content h1{
+          font-size: 45px;
+          margin-left: 30px;
+        }
+
+        .fitness_content h2{
+          font-size: 30px;
+          margin-left: 30px;
+        }
+
+        .fitness_content p{
+          text-align: justify;
+          margin-left: 30px;
+          margin-right: 30px;
+          line-height:1.8;
+        }
+
+        .trainer_image{
+          width: 480px;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          margin-top: 5vw;
+          margin-right: 5vw;
+        }
+/*---------------Power Up Your Workouts---------------*/        
+        .equipment{
+          background-color: rgba(248, 248, 248, 1);
+          position: relative;
+          text-align: right;
+          display: flex;
+          flex-direction: column;
+          margin-top: 3vw;
+        }
+
+       .equipment img{
+         width: 50vw;
+         display: flex;
+         flex-direction: row;
+         justify-content: flex-start;        
+       }
+
+       .equipment_layout{
+         position: absolute;
+         text-align: center;
+         left: 56%;
+         bottom: 33%;
+         font-weight: bold;
+         font-size: 2.0em;
+       }
+
+        .button_equipment {
+          font-size: 20px;
+          font-weight: bold;
+          padding-left: 30px;
+          padding-right: 30px;
+          border-radius: 3px;
+          color: black;
+          background-color: transparent;
+          border-color: red;
+          display: inline-block;
+          margin-bottom: 0;
+          text-align: right;
+          vertical-align: middle;
+          touch-action: manipulation;
+          cursor: pointer;
+          background-image: none;
+          border: 1px solid black;
+          white-space: nowrap;
+          padding: 3px 12px;
+          line-height: 1.73;
+          user-select: none;
+          text-decoration: none;
+        }
+
+        .button_equipment:hover{
+          border: 1px solid black;
+          color: white;
+          background-color: black;
+        }
+
+/*       .category img{
+          position: center;
+          border-radius: 15px;
+          margin-top: 1vw;
+          margin-left: 3vw;
+          margin-right: 3vw;
+          float: left;
+          width: 18.8%;
+          padding: 5px;
+          box-sizing: border-box;
+       }*/
+
+/*---------------Categories---------------*/
+       .category img{
+           width: 300px;
+           height:200px;
+           margin-left: 2.5vw;
+           margin-right: 2.5vw;
+           border-radius: 15px;
+       }
+/*
+       .category_layout::after{
+         content: "";
+         clear: both;
+         display: flex;
+         flex-direction:column;
+       }*/
+
+       .category_layout{
+         width: 900px;
+         height: 400px;
+         margin-top: 30px;
+         display: flex;
+       }
+
+       .category h1{
+         margin-top: 8vw;
+         margin-left: 3vw;
+         font-weight: bold;
+         font-size: 3.0em;
+       }
+
+       .category_name h3{
+         width: 200px;
+         text-align: center;
+         font-size: large;
+         margin-left: 3vw;
+         display: flex;
+         flex-direction:row;
+       }
+
+/*---------------About Us---------------*/
+        .about_us {
+          background-color: rgba(248, 248, 248, 1);
+          text-align: left;
+          display: flex;
+          flex-direction: row;
+        }
+
+        .about_content1 h1{
+          position: relative;
+          font-size: 3.0em;
+          margin-left: 30px;
+          text-align:center;
+          left: 28%;
+        }
+
+        .about_content1 h2 {
+          font-size: 30px;
+          margin-left: 30px;
+        }
+
+        .about_content1 p{
+          text-align: justify;
+          margin-left: 3vw;
+          margin-right: 3vw;
+          line-height:1.8;
+        }
+
+        .gym_room{
+          position: relative;
+          width: 400px;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          margin-right: 3vw;
+          padding-top: 10vw;
+          padding-bottom: 3vw;
+        }
+
+        .about_us2 {
+          background-color: rgba(248, 248, 248, 1);
+          text-align: left;
+          display: flex;
+          flex-direction: row;
+        }
+
+        .about_content2 h2 {
+          font-size: 30px;
+          margin-left: 30px;
+          margin-top: 3vw;
+        }
+
+        .about_content2 p{
+          text-align: justify;
+          margin-left: 30px;
+          margin-right: 30px;
+          line-height:1.8;
+        }
+
+        .manufacturing {
+            position: relative;
+            width: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            margin-left: 3vw;
+            padding-top: 3vw;
+            padding-bottom: 3vw;
+        }
+
+/*---------------Join Memmbership---------------*/
+        .join_member img{
+            width: 100vw;
+            max-width: 100%;
+        }
+
+        .join_member{
+           position: relative;
+        }
+
+        .membership{
+          position: absolute;
+          text-align: center;
+          color: white;
+          font-size: 35px;
+          top: 40%;
+          left: 35%;
+          transform: translate(-50%, -50%);
+        }
+        
+        .join_button {
+          font-size: 20px;
+          font-weight: bold;
+          padding-left: 30px;
+          padding-right: 30px;
+          border-radius: 3px;
+          color: #fff;
+          background-color: red;
+          border-color: red;
+          display: inline-block;
+          margin-bottom: 0;
+          text-align: center;
+          vertical-align: middle;
+          touch-action: manipulation;
+          cursor: pointer;
+          background-image: none;
+          border: 1px solid transparent;
+          white-space: nowrap;
+          padding: 3px 12px;
+          line-height: 1.73;
+          user-select: none;
+          text-decoration: none;
+        }
+        
+        .join_button:hover{
+          border: 1px solid darkred;
+          color: white;
+          background-color: darkred;
+        }
+
+/*---------------Footer---------------*/
+        /* Footer Left */
+        footer {
+          /* position: fixed; */
+          bottom: 0;
+          background-color: white;
+          box-shadow: 0px -4px 16px rgba(34, 34, 34, 0.12);
+          min-height: 16vh;
+          width: 100%;
+        }
+
+        .footer-top {
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+        }
+
+        .footer-left {
+          display: flex;
+          justify-content: flex-start;
+          align-items: flex-start;
+        }
+
+        .footer-left #newsletter-subscribe-wrapper {
+          margin-top: 15px;
+          padding: 10px;
+          padding-left: 6vw;
+          padding-right: 6vw;
+          padding-bottom: 20px;
+          border-right: 1px solid var(--div-grey);
+          flex-grow: 1;
+        }
+
+        #newsletter-subscribe-wrapper span,
+        #footer-logo {
+          color: var(--theme-red);
+        }
+
+        #newsletter-subscribe-wrapper label {
+          font-size: 18px;
+          font-weight: bold;
+        }
+
+        #newsletter-subscribe-wrapper form {
+          margin-top: 10px;
+        }
+
+        #newsletter-subscribe-wrapper form input {
+          line-height: 21px;
+          padding: 4px 5px;
+          font-size: 14px;
+          border-radius: 4px;
+          border: 2px solid rgb(235, 235, 235);
+          margin-right: 5px;
+          width: 205.83px;
+          outline: none;
+        }
+
+        #newsletter-subscribe-wrapper form input::placeholder {
+          font-weight: bold;
+          font-size: 14px;
+        }
+
+        #newsletter-subscribe-wrapper form button {
+          line-height: 20px;
+          padding: 5px 5px;
+          border-radius: 4px;
+          border: 2px solid rgb(235, 235, 235);
+          font-weight: bold;
+          cursor: pointer;
+          transition: 0.2s;
+        }
+
+        #newsletter-subscribe-wrapper form button:disabled {
+          pointer-events: none;
+        }
+
+
+        .footer-mobile-bottom {
+          display: flex;
+          flex: 1;
+        }
+
+        /* Footer Social Media Part */
+        footer .footer-mobile-bottom .social-media-wrapper {
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-top: 20px;
+          padding-top: 10px;
+          padding-bottom: 20px;
+          border-right: 1px solid var(--div-grey);
+          flex-grow: 1;
+        }
+
+        .social-media-wrapper a i {
+          font-size: 1.5rem;
+          width: 40px;
+          height: 40px;
+          padding: 5px;
+          margin: 10px;
+          margin-top: 10px;
+          text-align: center;
+          line-height: 30px;
+          transition: 0.2s;
+        }
+
+        footer i:hover {
+          background-color: rgba(220, 220, 220, 0.5);
+          box-shadow: 0px 2px 8px rgba(34, 34, 34, 0.12);
+          border-radius: 50%;
+          color: var(--theme-red);
+          transform: translateY(-3px);
+        }
+
+        /* Footer Navigation Links */
+        footer .footer-mobile-bottom .footer-nav-wrapper {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          padding-top: 25px;
+          flex-grow: 2;
+        }
+
+        .footer-navlink-links {
+          display: flex;
+        }
+
+        footer .footer-mobile-bottom .footer-nav-links h2 {
+          font-weight: bold;
+          font-size: 18px;
+        }
+
+        .footer-mobile-bottom .footer-navlink-links .footer-nav {
+          margin: 15px;
+          margin-top: 10px;
+          font-size: 16px;
+          font-weight: 500;
+        }
+
+        .footer-mobile-bottom .footer-navlink-links .footer-nav li a {
+          color: grey;
+        }
+
+        .footer-mobile-bottom .footer-navlink-links .footer-nav li a:hover {
+          color: var(--theme-red);
+        }
+
+        .footer-mobile-bottom .footer-navlink-links .footer-nav li a:active {
+          color: var(--theme-red);
+        }
+
+        #copyright {
+          display: block;
+          text-align: center;
+          font-weight: bold;
+          padding: 10px;
+        }
+
+    </style>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
