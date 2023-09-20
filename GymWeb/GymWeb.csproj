@@ -72,7 +72,10 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Admin\AddWorkoutClass.aspx" />
     <Content Include="CreateUser.aspx" />
+    <Content Include="Img\account-icon\hide.png" />
+    <Content Include="Img\account-icon\show.png" />
     <Content Include="Img\Login\login_background.jpg" />
     <Content Include="Login.aspx" />
     <Content Include="Maintenance\Maintenance.aspx" />
@@ -165,6 +168,13 @@
     </Compile>
     <Compile Include="Admin\AddProduct.aspx.designer.cs">
       <DependentUpon>AddProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AddWorkoutClass.aspx.cs">
+      <DependentUpon>AddWorkoutClass.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AddWorkoutClass.aspx.designer.cs">
+      <DependentUpon>AddWorkoutClass.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
@@ -296,8 +306,7 @@
     </Compile>
     <Compile Include="Trainers.aspx.designer.cs">
       <DependentUpon>Trainers.aspx</DependentUpon>
-      </Compile>
-
+    </Compile>
     <Compile Include="Admin\ViewProduct.aspx.cs">
       <DependentUpon>ViewProduct.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -321,6 +330,7 @@
       <DependentUpon>Product.edmx</DependentUpon>
     </Content>
     <Content Include="Admin\AdminHome.Master" />
+    <Content Include="Admin\Web.config" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
