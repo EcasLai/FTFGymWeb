@@ -74,6 +74,8 @@
   <ItemGroup>
     <Content Include="Admin\AddWorkoutClass.aspx" />
     <Content Include="CreateUser.aspx" />
+    <Content Include="Img\account-icon\hide.png" />
+    <Content Include="Img\account-icon\show.png" />
     <Content Include="Img\Login\login_background.jpg" />
     <Content Include="Login.aspx" />
     <Content Include="Maintenance\Maintenance.aspx" />
@@ -328,6 +330,7 @@
       <DependentUpon>Product.edmx</DependentUpon>
     </Content>
     <Content Include="Admin\AdminHome.Master" />
+    <Content Include="Admin\Web.config" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
