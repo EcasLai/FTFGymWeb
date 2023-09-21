@@ -72,8 +72,20 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Admin\AddCategory.aspx" />
+    <Content Include="Admin\AddWorkoutClass.aspx" />
     <Content Include="CreateUser.aspx" />
+    <Content Include="Img\account-icon\hide.png" />
+    <Content Include="Img\account-icon\show.png" />
+    <Content Include="Img\ClassList\classBg3.jpg" />
     <Content Include="Img\Login\login_background.jpg" />
+    <Content Include="Img\product\Men%281%29.jpg" />
+    <Content Include="Img\product\Men%282%29.jpg" />
+    <Content Include="Img\product\Men%283%29.jpg" />
+    <Content Include="Img\product\Men%284%29.jpg" />
+    <Content Include="Img\product\Men%285%29.jpg" />
+    <Content Include="Img\product\Men%286%29.jpg" />
+    <Content Include="Img\product\Women%281%29.jpg" />
     <Content Include="Login.aspx" />
     <Content Include="Maintenance\Maintenance.aspx" />
     <Content Include="Account.aspx" />
@@ -108,15 +120,19 @@
     <Content Include="Img\Trainer\Trainer3.png" />
     <Content Include="Img\Trainer\Trainer4.jpg" />
     <Content Include="Img\Trainer\Trainer5.jpg" />
-    <Content Include="Img\product\Men%27s%281%29.jpg" />
-    <Content Include="Img\product\Men%27s%282%29.jpg" />
-    <Content Include="Img\product\Men%27s%283%29.jpg" />
     <Content Include="Img\product\productLogo.jpg" />
-    <Content Include="Img\product\Women%27s%281%29.jpg" />
-    <Content Include="Img\product\Women%27s%282%29.jpg" />
-    <Content Include="Img\product\Women%27s%283%29.jpg" />
     <Content Include="Media\fitness.mp4" />
     <Content Include="Media\Promo.mp4" />
+    <Content Include="Models\Customer.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Customer.edmx</DependentUpon>
+      <LastGenOutput>Customer.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\Customer.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Customer.edmx</DependentUpon>
+      <LastGenOutput>Customer1.cs</LastGenOutput>
+    </Content>
     <Content Include="Models\Product.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Product.edmx</DependentUpon>
@@ -129,6 +145,7 @@
     </Content>
     <Content Include="MyAccount\MyAccount.aspx" />
     <Content Include="MyOrders.aspx" />
+    <Content Include="PageNotFound.html" />
     <Content Include="ProductDetail.aspx" />
     <Content Include="ProductList.aspx" />
     <Content Include="script\Account.js" />
@@ -137,6 +154,7 @@
     <Content Include="Style\classList.css" />
     <Content Include="Style\homepage.css" />
     <Content Include="Style\master.css" />
+    <Content Include="Style\star.css" />
     <Content Include="Trainers.aspx" />
     <Content Include="Style\productDetail.css" />
     <Content Include="Style\productList.css" />
@@ -159,12 +177,26 @@
     <Compile Include="AddTrainer.aspx.designer.cs">
       <DependentUpon>AddTrainer.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\AddCategory.aspx.cs">
+      <DependentUpon>AddCategory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AddCategory.aspx.designer.cs">
+      <DependentUpon>AddCategory.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\AddProduct.aspx.cs">
       <DependentUpon>AddProduct.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Admin\AddProduct.aspx.designer.cs">
       <DependentUpon>AddProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AddWorkoutClass.aspx.cs">
+      <DependentUpon>AddWorkoutClass.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AddWorkoutClass.aspx.designer.cs">
+      <DependentUpon>AddWorkoutClass.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
@@ -236,6 +268,24 @@
     <Compile Include="Homepage.aspx.designer.cs">
       <DependentUpon>Homepage.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Models\Customer.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Customer.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Customer.cs">
+      <DependentUpon>Customer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Customer.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Customer.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Customer1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Customer.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Product.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -296,8 +346,7 @@
     </Compile>
     <Compile Include="Trainers.aspx.designer.cs">
       <DependentUpon>Trainers.aspx</DependentUpon>
-      </Compile>
-
+    </Compile>
     <Compile Include="Admin\ViewProduct.aspx.cs">
       <DependentUpon>ViewProduct.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -313,6 +362,7 @@
     <Content Include="MyAccount\Account.Master" />
     <Content Include="Account.master" />
     <Content Include="libman.json" />
+    <Content Include="Admin\AdminHome.Master" />
     <EntityDeploy Include="Models\Product.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Product.Designer.cs</LastGenOutput>
@@ -321,6 +371,14 @@
       <DependentUpon>Product.edmx</DependentUpon>
     </Content>
     <Content Include="Admin\AdminHome.Master" />
+    <Content Include="Admin\Web.config" />
+    <EntityDeploy Include="Models\Customer.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Customer.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Customer.edmx.diagram">
+      <DependentUpon>Customer.edmx</DependentUpon>
+    </Content>
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

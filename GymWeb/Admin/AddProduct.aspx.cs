@@ -15,37 +15,30 @@ namespace GymWeb
 
         }
 
-        public int A()
-        {
-            string stmt = "SELECT COUNT(*) FROM dbo.Product";
-            int count = 0;
-
-            using (SqlConnection thisConnection = new SqlConnection("Data Source=FTFGymEntities1"))
-            {
-                using (SqlCommand cmdCount = new SqlCommand(stmt, thisConnection))
-                {
-                    thisConnection.Open();
-                    count = (int)cmdCount.ExecuteScalar();
-                }
-            }
-            return count;
-        }
+        
 
         public void Unnamed_InsertItem()
         {
+            DropDownList intInputDropDown = FormViewAddProduct.FindControl("ddlCategory") as DropDownList;
+
+            string ddlText = intInputDropDown.SelectedItem.Text;
+            int.TryParse(ddlText, out int ddlValue);
+
             Models.Product item = new Models.Product();
+            item.CategoryId = ddlValue;
+
             TryUpdateModel(item);
             if (ModelState.IsValid)
             {
                 // Save changes here
-                Models.FTFGymEntities1 _pd = new Models.FTFGymEntities1();
-
-                item.ProductId = A();
+                Models.FTFGymEntities _pd = new Models.FTFGymEntities();
 
                 _pd.Products.Add(item);
                 _pd.SaveChanges();
-                Response.Redirect("/ViewProduct.aspx");
+                Response.Redirect("~/Admin/ViewProduct.aspx");
             }
         }
+
+        
     }
 }

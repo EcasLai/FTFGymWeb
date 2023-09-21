@@ -13,84 +13,57 @@
     </div>
 
     <aside class="ProductNavi">
-        <div class="productCategory">
-            <a href="#Men">Men</a>
-        </div>
-        <div class="productCategory">
+        <asp:Repeater ID="Repeater2" runat="server" DataSourceID="SqlDataSource2">
+            <ItemTemplate>
+                <div class="productCategory">
+                    <%--<a href="#Men">Men</a>--%>
+                    <asp:HyperLink runat="server" CssClass="Hyperlink"><%#Eval("Title") %></asp:HyperLink>
+                </div>
+            </ItemTemplate>
+        </asp:Repeater>
+        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Category]"></asp:SqlDataSource>
+        
+        <%--<div class="productCategory">
             <a href="#Women">Women</a>
         </div>
         <div class="productCategory">
             <a href="#Equipment">Equipment</a>
         </div>
         <div class="productCategory">
-            <a href="#Items">Items</a>
-        </div>
+            <a href="#Item">Item</a>
+        </div>--%>
     </aside>
 
 
     <section id="Men">
-        <div class="productList">
+        <asp:Repeater ID="Repeater1" runat="server" DataSourceID="SqlDataSource1">
+            <ItemTemplate>
+                <div class="product">
+                    <div class="productImg">
+                        <img src="<%#Eval("ImageUrl") %>" alt="Men1" />
+                    </div>
 
-            <div class="product">
-                <div class="productImg">
-                    <img src="Img/product/Men's(1).jpg" alt="Men1" />
+                    <div class="productLabel">
+                        <p>
+                            <%#Eval("Name") %>
+                        </p>
+                        <p>
+                            RM <%#Eval("Price") %>
+                        </p>
+                    </div>
+
+                    <div class="ProductPurchase">
+                        <%--<a href="ProductDetail.aspx">Purchase Now!</a>--%>
+                        <asp:HyperLink runat="server" CssClass="Hyperlink2" NavigateUrl='<%# "~/ProductDetail.aspx?Productid=" + Eval("ProductId") %>'>Purchase Now!</asp:HyperLink>
+                    </div>
+
                 </div>
 
-                <div class="productLabel">
-                    <p>
-                        NPRO™ MEN GYM HOODIE
-                    </p>
-                    <p>
-                        RM 139.90
-                    </p>
-                </div>
-
-                <div class="ProductPurchase">
-                    <a href="ProductDetail.aspx">Purchase Now!
-                    </a>
-                </div>
-
-            </div>
+            </ItemTemplate>
+        </asp:Repeater>
 
 
-            <div class="product">
-                <div class="productImg">
-                    <img src="Img/product/Men's(2).jpg" alt="Men2" />
-                </div>
-
-                <div class="productLabel">
-                    <p>
-                        Short Sleezy Gray
-                    </p>
-                    <p>
-                        RM 159.90
-                    </p>
-                </div>
-
-                <div class="ProductPurchase">
-                    <a href="ProductDetail.aspx">Purchase Now!
-                    </a>
-                </div>
-
-            </div>
-
-            <div class="product">
-                <div class="productImg">
-                    <img src="Img/product/Men's(3).jpg" alt="Men3" />
-                </div>
-
-                <div class="productLabel">
-                    <p>
-                        Short Sleeve T-shirt
-                    </p>
-                    <p>RM 49.90</p>
-                </div>
-
-                <div class="ProductPurchase">
-                    <a href="ProductDetail.aspx">Purchase Now!
-                    </a>
-                </div>
-            </div>
-        </div>
     </section>
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Product]">
+    </asp:SqlDataSource>
 </asp:Content>
