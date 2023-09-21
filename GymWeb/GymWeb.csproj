@@ -73,6 +73,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Admin\AddWorkoutClass.aspx" />
+    <Content Include="Admin\ViewWorkoutClass.aspx" />
     <Content Include="CreateUser.aspx" />
     <Content Include="Img\account-icon\hide.png" />
     <Content Include="Img\account-icon\show.png" />
@@ -149,6 +150,7 @@
     <Content Include="script\Account.js" />
     <Content Include="script\ChangePassword.js" />
     <Content Include="script\Homepage.js" />
+    <Content Include="Style\adminWorkoutClass.css" />
     <Content Include="Style\classList.css" />
     <Content Include="Style\homepage.css" />
     <Content Include="Style\master.css" />
@@ -201,6 +203,13 @@
     </Compile>
     <Compile Include="Admin\AdminHome.Master.designer.cs">
       <DependentUpon>AdminHome.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ViewWorkoutClass.aspx.cs">
+      <DependentUpon>ViewWorkoutClass.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ViewWorkoutClass.aspx.designer.cs">
+      <DependentUpon>ViewWorkoutClass.aspx</DependentUpon>
     </Compile>
     <Compile Include="CreateUser.aspx.cs">
       <DependentUpon>CreateUser.aspx</DependentUpon>

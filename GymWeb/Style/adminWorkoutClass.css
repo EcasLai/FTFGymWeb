@@ -1,0 +1,79 @@
+﻿.tdclass {
+    padding: 1.5em;
+    margin: auto;
+    width: 80%;
+    border-collapse: separate;
+    border-spacing: 0 1em;
+    background-color: #fafafa;
+    filter: opacity(90%);
+}
+
+.labeltable {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.textBoxCol {
+    width: 70%;
+}
+
+.textBoxColFront {
+    width: 25%;
+}
+
+.textBoxColMid {
+    font-weight: bold;
+    width: 5%;
+}
+
+.container {
+    padding: 1.5em;
+    margin: auto;
+    width: 95%;
+    background-color: #F3F3F3;
+    filter: opacity(90%);
+}
+
+.header {
+    width: 200px;
+    height: 23px;
+    font-size: 1.8em;
+    font-weight: bolder;
+}
+
+.submitClearBtn {
+    float: right;
+    border: none;
+    display: inline-block;
+    font-size: 16px;
+    padding: 1em 2em;
+    margin: 0.5em 0.25em;
+    background-color: gold;
+    cursor: pointer;
+}
+
+.searchBar {
+    width: 100%;
+}
+
+.submitClearBtn:hover {
+    filter: brightness(60%);
+    transition: 0.8s;
+}
+
+.auto-style7 {
+    width: 50%;
+}
+
+.textbox, .dropdownList {
+    width: 100%;
+    height: 32px;
+}
+
+.auto-style9 {
+    height: 76px;
+}
+
+.auto-style10 {
+    width: 30%
+}
