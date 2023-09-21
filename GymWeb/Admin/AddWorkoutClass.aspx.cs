@@ -36,6 +36,8 @@ namespace GymWeb.Admin
                 connection.Open();
                 cmd.ExecuteNonQuery();
                 connection.Close();
+
+                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Workout Class Added SuccessFully.')", true);
             }
         }
 
@@ -52,7 +54,6 @@ namespace GymWeb.Admin
             txtTime.Text = "";
             txtDate.Text = "";
             txtPrice.Text = "";
-            lbltest.Text = "";
         }
     }
 }
