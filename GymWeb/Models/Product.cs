@@ -21,5 +21,6 @@ namespace GymWeb.Models
         public Nullable<int> Stock { get; set; }
         public Nullable<decimal> Price { get; set; }
         public string ImageUrl { get; set; }
+        public Nullable<int> CategoryId { get; set; }
     }
 }

@@ -56,7 +56,7 @@
             display: flex;
             flex-direction: column;
             align-self: center !important;
-            width: 20rem;
+            width: 18rem;
             padding: 1.5rem;
             background-color: white;
             border-radius: 0.5rem;
@@ -102,58 +102,41 @@
             color: #333333;
         }
 
-        .loginForm, .loginForm table {
+        .loginForm {
             width: 100%;
         }
 
-        .loginForm tbody tbody tr:first-child {
-            display: none;
-        }
-
-        .loginForm tbody tbody tr:nth-child(2),
-        .loginForm tbody tbody tr:nth-child(3) {
+        .loginForm .loginForm-row {
             display: flex;
+            margin-bottom: 1rem;
         }
 
-        .loginForm tbody tbody tr:nth-child(2) td:first-child,
-        .loginForm tbody tbody tr:nth-child(3) td:first-child {
+        .loginForm .loginForm-row span {
             flex: 1;
-            text-align: left !important;
+            align-self: center;
         }
 
-        .loginForm tbody tbody tr:nth-child(2) td:last-child,
-        .loginForm tbody tbody tr:nth-child(3) td:last-child {
+        .loginForm .loginForm-row input {
             flex: 3;
             width: 100%;
-        }
-
-        .loginForm tbody tbody tr:nth-child(2) td input,
-        .loginForm tbody tbody tr:nth-child(3) td input {
             margin-left: 0.2rem;
             padding: 0.7rem;
             border: 1px solid #ced4da;
             border-radius: 0.5rem;
             color: #333333;
-        }
-
-        #ContentPlaceHolder1_Login1_UserName, #ContentPlaceHolder1_Login1_Password {
-            width: 87.5%;
             outline: none;
         }
 
-        #ContentPlaceHolder1_Login1_UserName:focus,
-        #ContentPlaceHolder1_Login1_UserName:focus-visible,
-        #ContentPlaceHolder1_Login1_Password:focus,
-        #ContentPlaceHolder1_Login1_Password:focus-visible {
+        .loginForm .loginForm-row input:focus,
+        .loginForm .loginForm-row input:focus-visible {
             border: 1px solid var(--theme-red);
         }
 
-        .loginForm tbody tbody tr:nth-child(4) {
-
+        .loginForm .loginForm-row.rmbMeRow input {
+            flex: 0;
         }
 
-        .loginForm tbody tbody tr:nth-child(5) #ContentPlaceHolder1_Login1_LoginButton {
-            margin-top: 1.5rem;
+        .loginForm .loginForm-row .login-btn {
             margin-bottom: 5px;
             padding: 0.8rem;
             width: 100%;
@@ -165,14 +148,14 @@
             background-color: var(--theme-red);
             border-radius: 0.25rem;
             border: 1px solid var(--theme-red);
+            letter-spacing: 0.2em;
         }
 
-        .loginForm tbody tbody tr:last-child {
-           display: flex;
-            width: 100%;
+        .loginForm .loginForm-row .login-btn:hover {
+            background-color: #ad022e;
         }
 
-        .loginForm tbody tbody tr:last-child td {
+        .loginForm .loginForm-row:last-child {
             width: 100%;
             display: flex;
             flex-direction: row;
@@ -180,7 +163,7 @@
             align-items: center;
         }
 
-        .loginForm tbody tbody tr:last-child a {
+        .loginForm .loginForm-row:last-child a {
             text-decoration: none;
             color: var(--theme-red);
             font-weight: 600;
@@ -202,8 +185,29 @@
 
                      <p class="loginForm-desc">Enter your details to sign in or press sign up</p>
 
-                     <asp:Login ID="Login1" runat="server" CreateUserText="SIGN UP" CreateUserUrl="~/CreateUser.aspx" CssClass="loginForm" HelpPageText="FORGOT PASSWORD" DestinationPageUrl="~/Homepage.aspx">
-                     </asp:Login>
+                     <%--<asp:Login ID="Login1" runat="server" CreateUserText="SIGN UP" CreateUserUrl="~/CreateUser.aspx" CssClass="loginForm" HelpPageText="FORGOT PASSWORD" DestinationPageUrl="~/Homepage.aspx">
+                     </asp:Login>--%>
+
+                     <section class="loginForm">
+                         <div class="loginForm-row">
+                             <asp:Label ID="lblEmail" runat="server" Text="Email"></asp:Label>
+                             <asp:TextBox ID="txtEmail" runat="server"></asp:TextBox>
+                         </div>
+                         <div class="loginForm-row">
+                             <asp:Label ID="lblPwd" runat="server" Text="Password"></asp:Label>
+                             <asp:TextBox ID="txtPassword" runat="server"></asp:TextBox>
+                         </div>
+                         <div class="loginForm-row rmbMeRow">
+                             <asp:CheckBox ID="cbRmbMe" Text="Remember me next time." runat="server" />
+                         </div>
+                         <div class="loginForm-row">
+                             <asp:Button ID="btnLogIn" runat="server" Text="Login" CssClass="login-btn" OnClick="btnLogIn_Click" />
+                         </div>
+                         <div class="loginForm-row">
+                             <asp:HyperLink ID="hlSignUp" NavigateUrl="~/CreateUser.aspx" runat="server">SIGN UP</asp:HyperLink>
+                             <asp:HyperLink ID="hlForgotPwd" NavigateUrl="~/ForgotPassword.aspx" runat="server">FORGOT PASSWORD</asp:HyperLink>
+                         </div>
+                     </section>
 
                  </section>
             </div>

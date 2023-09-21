@@ -18,5 +18,11 @@ namespace GymWeb
         {
 
         }
+
+        protected void linkLogout_Click(object sender, EventArgs e)
+        {
+            Session.Abandon();
+            Response.Redirect("~/Homepage.aspx");
+        }
     }
 }

@@ -101,76 +101,66 @@
             color: #333333;
         }
 
-        .signupForm, .signupForm table {
+        .signupForm {
             width: 100%;
         }
 
-        .signupForm tbody tbody tr:first-child {
-            display: none;
-        }
-
-        .signupForm tbody tbody tr:nth-child(2),
-        .signupForm tbody tbody tr:nth-child(3),
-        .signupForm tbody tbody tr:nth-child(4),
-        .signupForm tbody tbody tr:nth-child(5) {
+        .signupForm .signupForm-row {
             display: flex;
+            margin-bottom: 1rem;
         }
 
-        .signupForm tbody tbody tr:nth-child(2) td:first-child,
-        .signupForm tbody tbody tr:nth-child(3) td:first-child,
-        .signupForm tbody tbody tr:nth-child(4) td:first-child,
-        .signupForm tbody tbody tr:nth-child(5) td:first-child {
-            width: 7.6rem !important;
-            text-align: left !important;
+        .signupForm .signupForm-row span {
+            flex: 1;
+            align-self: center;
         }
 
-        .signupForm tbody tbody tr:nth-child(2) td:last-child,
-        .signupForm tbody tbody tr:nth-child(3) td:last-child,
-        .signupForm tbody tbody tr:nth-child(4) td:last-child,
-        .signupForm tbody tbody tr:nth-child(5) td:last-child {
+        .signupForm .signupForm-row input {
             flex: 3;
             width: 100%;
-        }
-
-        .signupForm tbody tbody tr:nth-child(2) td input,
-        .signupForm tbody tbody tr:nth-child(3) td input,
-        .signupForm tbody tbody tr:nth-child(4) td input,
-        .signupForm tbody tbody tr:nth-child(5) td input {
             margin-left: 0.2rem;
             padding: 0.7rem;
             border: 1px solid #ced4da;
             border-radius: 0.5rem;
             color: #333333;
-        }
-
-        #ContentPlaceHolder1_wSignupForm_CreateUserStepContainer_UserName,
-        #ContentPlaceHolder1_wSignupForm_CreateUserStepContainer_Password,
-        #ContentPlaceHolder1_wSignupForm_CreateUserStepContainer_ConfirmPassword,
-        #ContentPlaceHolder1_wSignupForm_CreateUserStepContainer_Email {
-            width: 87.5%;
             outline: none;
         }
 
-        #ContentPlaceHolder1_wSignupForm_CreateUserStepContainer_UserName:focus,
-        #ContentPlaceHolder1_wSignupForm_CreateUserStepContainer_UserName:focus-visible
-        #ContentPlaceHolder1_wSignupForm_CreateUserStepContainer_Password:focus,
-        #ContentPlaceHolder1_wSignupForm_CreateUserStepContainer_Password:focus-visible,
-        #ContentPlaceHolder1_wSignupForm_CreateUserStepContainer_ConfirmPassword:focus,
-        #ContentPlaceHolder1_wSignupForm_CreateUserStepContainer_ConfirmPassword:focus-visible,
-        #ContentPlaceHolder1_wSignupForm_CreateUserStepContainer_Email:focus, 
-        #ContentPlaceHolder1_wSignupForm_CreateUserStepContainer_Email:focus-visible {
+        .signupForm .signupForm-row input:focus,
+        .signupForm .signupForm-row input:focus-visible {
             border: 1px solid var(--theme-red);
         }
 
-        .signupForm tbody tbody tr:nth-child(4) {
-
+        .signupForm .signupForm-row.rmbMeRow input {
+            flex: 0;
         }
 
-         #ContentPlaceHolder1_wSignupForm___CustomNav0_StepNextButton {
-            margin-top: 1.5rem;
+        .signupForm .signupForm-row:nth-child(2) {
+            position: relative;
+        }
+
+        .signupForm .input-group-append {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            margin-right: 0.2rem;
+            transform: translateY(-50%);
+            background: none;
+        }
+
+        .signupForm .input-group-append button {
+            background: none !important;
+            border: none;
+        }
+
+        .signupForm .input-group-append button span {
+            color: black;
+        }
+
+        .signupForm .signupForm-row .signup-btn {
             margin-bottom: 5px;
             padding: 0.8rem;
-            width: 100% !important;
+            width: 100%;
             color: white;
             text-transform: uppercase;
             font-size: 0.875rem;
@@ -179,14 +169,14 @@
             background-color: var(--theme-red);
             border-radius: 0.25rem;
             border: 1px solid var(--theme-red);
+            letter-spacing: 0.2em;
         }
 
-        .signupForm tbody tbody tr:last-child {
-           display: flex;
-            width: 100%;
+        .signupForm .signupForm-row .signup-btn:hover {
+            background-color: #ad022e;
         }
 
-        .signupForm tbody tbody tr:last-child td {
+        .signupForm .signupForm-row:last-child {
             width: 100%;
             display: flex;
             flex-direction: row;
@@ -194,16 +184,17 @@
             align-items: center;
         }
 
-        .signupForm tbody tbody tr:last-child a {
+        .signupForm .signupForm-row:last-child a {
             text-decoration: none;
             color: var(--theme-red);
             font-weight: 600;
             margin-bottom: 0;
         }
 
+
         .back-login-wrapper {
             margin: auto;
-            margin-top: 1.1rem;
+            margin-top: 0.5rem;
         }
 
         .back-login-wrapper span {
@@ -223,6 +214,33 @@
             text-decoration: none;
         }
     </style>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>  
+
+    <script type="text/javascript" defer>  
+        showPwd = false;
+
+        $(document).ready(function () { 
+            
+            $('#show_password').hover(function show() {
+                showPwd = !showPwd;
+                if (showPwd) {
+                    //Change the attribute to text  
+                    $('#txtPassword').attr('type', 'text');
+                    $('.icon').removeClass('fa fa-eye-slash').addClass('fa fa-eye');
+
+                }
+                else {
+                    //Change the attribute back to password  
+                    $('#txtPassword').attr('type', 'password');
+                    $('.icon').removeClass('fa fa-eye').addClass('fa fa-eye-slash');
+                }
+                
+            };
+        });  
+    </script> 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <section id="signup">
@@ -238,7 +256,7 @@
 
                      <p class="signupForm-desc">The email has to be the same email registered under your membership</p>
 
-                     <asp:CreateUserWizard ID="wSignupForm" runat="server" CssClass="signupForm">
+                     <%--<asp:CreateUserWizard ID="wSignupForm" runat="server" CssClass="signupForm">
                          <WizardSteps>
                              <asp:CreateUserWizardStep ID="CreateUserWizardStep1" runat="server">
                                  <CustomNavigationTemplate>
@@ -254,8 +272,30 @@
                              <asp:CompleteWizardStep ID="CompleteWizardStep1" runat="server">
                              </asp:CompleteWizardStep>
                          </WizardSteps>
-                     </asp:CreateUserWizard>
+                     </asp:CreateUserWizard>--%>
 
+                    <section class="signupForm">
+                        <div class="signupForm-row">
+                             <asp:Label ID="lblEmail" runat="server" Text="Email"></asp:Label>
+                             <asp:TextBox ID="txtEmail" runat="server"></asp:TextBox>
+                         </div>
+                         <div class="signupForm-row">
+                             <asp:Label ID="lblPwd" runat="server" Text="Password"></asp:Label>
+                             <asp:TextBox ID="txtPassword" TextMode="Password" runat="server"></asp:TextBox>
+                             <div class="input-group-append">  
+                                <button id="show_password" class="btn btn-primary" type="button">  
+                                    <span class="fa fa-eye-slash icon"></span>  
+                                </button>  
+                            </div>  
+                         </div>
+                        <div class="signupForm-row">
+                             <asp:Label ID="Label1" runat="server" Text="Confirm Password"></asp:Label>
+                             <asp:TextBox ID="txtRePwd" TextMode="Password" runat="server"></asp:TextBox>
+                         </div>       
+                         <div class="signupForm-row">
+                             <asp:Button ID="btnSignIn" runat="server" Text="Sign Up" CssClass="signup-btn" OnClick="btnSignIn_Click" />
+                         </div>
+                     </section>
 
                      <div class="back-login-wrapper">
                          <span>Back to </span><asp:HyperLink ID="NavLoginLink" runat="server" NavigateUrl="~/Login.aspx" CssClass="navi-login-link">Login</asp:HyperLink>
