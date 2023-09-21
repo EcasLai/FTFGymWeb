@@ -53,7 +53,7 @@
             width: 25vw;
         }
 
-        .right-content .form-button-group-view button  {
+        .right-content .form-button-group-view input  {
             margin-left: 0;
             padding: 0.8rem 1.8rem;
             display: inline;
@@ -88,7 +88,7 @@
             border: 3px solid #e2cc4e;
         }
 
-        .right-content .form-button-group-edit button {
+        .right-content .form-button-group-edit input {
             background-color: #c30032;
             border: 3px solid #c30032;
             color: #ffffff;
@@ -101,35 +101,30 @@
         <h2 id="section-title">Account Overview</h2>
         <div class="form-input-row">
             <div class="form-input">
-                <asp:Label ID="lblUsername" runat="server" Text="Username" ></asp:Label>
-                <asp:TextBox ID="txtUsername" runat="server" placeholder="Username" ReadOnly="true" Enabled="false"></asp:TextBox>
-            </div>
-
-            <div class="form-input">
                 <asp:Label ID="lblFirstName" runat="server" Text="First Name"></asp:Label>
-                <asp:TextBox ID="txtFirstName" runat="server" placeholder="First Name" ReadOnly="true" Enabled="false"></asp:TextBox>
+                <asp:TextBox ID="txtFirstName" runat="server" placeholder="First Name"></asp:TextBox>
             </div>
         </div>
             
         <div class="form-input">
             <asp:Label ID="lblLastName" runat="server" Text="Last Name"></asp:Label>
-            <asp:TextBox ID="txtLastName" runat="server" placeholder="Last Name" ReadOnly="true" Enabled="false"></asp:TextBox>
+            <asp:TextBox ID="txtLastName" runat="server" placeholder="Last Name"></asp:TextBox>
         </div>
 
         <div class="form-input">
             <asp:Label ID="lblEmail" runat="server" Text="Email"></asp:Label>
-            <asp:TextBox ID="txtEmail" runat="server" TextMode="Email" placeholder="example@email.com" ReadOnly="true" Enabled="false"></asp:TextBox>
+            <asp:TextBox ID="txtEmail" runat="server" TextMode="Email" placeholder="example@email.com" ReadOnly="true"></asp:TextBox>
         </div>
 
         <div class="form-input">
-            <asp:Label ID="lblPhoneNumber" runat="server" Text="Phone Number" ReadOnly="true" Enabled="false"></asp:Label>
+            <asp:Label ID="lblPhoneNumber" runat="server" Text="Phone Number" ReadOnly="true"></asp:Label>
             <div>
-                <asp:DropDownList ID="ddlCountryCode" runat="server" ReadOnly="true" Enabled="false">
+                <asp:DropDownList ID="ddlCountryCode" runat="server">
                     <asp:ListItem>+60</asp:ListItem>    
                     <asp:ListItem>+65</asp:ListItem>    
                     <asp:ListItem>+886</asp:ListItem>   
                 </asp:DropDownList>
-                <asp:TextBox ID="txtPhoneNumber" runat="server" TextMode="Phone" onkeypress="return isNumberKey(event)" ReadOnly="true" Enabled="false"></asp:TextBox>
+                <asp:TextBox ID="txtPhoneNumber" runat="server" TextMode="Phone" onkeypress="return isNumberKey(event)"></asp:TextBox>
             </div>
                
         </div>
@@ -143,11 +138,12 @@
             
         <%--<div  class="form-button-group-edit">
             <asp:Button ID="btnSubmit" runat="server" Text="Make Changes" CssClass="form-button" />
+            <asp:Button ID="btnEdit" runat="server" Text="Edit" OnClick="btnEdit_Click" />
             <button class="form-button">Discard</button>
         </div>--%>
 
-        <div  class="form-button-group-view">
-            <button class="form-button">Edit</button>
+        <div class="form-button-group-view">
+            <asp:Button ID="btnEdit" runat="server" Text="Edit" CssClass="form-button" OnClick="btnEdit_Click"  />
         </div>
            
         <asp:SqlDataSource ID="SqlDataSource1" runat="server"></asp:SqlDataSource>

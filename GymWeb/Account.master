@@ -141,13 +141,6 @@
                     </li>
 
                     <li class="guide-list-item">
-                        <a href="MyOrders.aspx" class="guide-list-item-link" >
-                            <span><asp:Image ID="OrderIcon" runat="server" ImageUrl="~/Img/account-icon/box.png" /></span>
-                            <span>My orders</span>  
-                        </a>
-                    </li>
-
-                    <li class="guide-list-item">
                         <a href="ChangePassword.aspx" class="guide-list-item-link" >
                             <span><asp:Image ID="LockIcon" runat="server" ImageUrl="~/Img/account-icon/padlock.png" /></span>
                             <span>Change password</span>   
