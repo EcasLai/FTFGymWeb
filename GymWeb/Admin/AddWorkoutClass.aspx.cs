@@ -52,7 +52,6 @@ namespace GymWeb.Admin
             txtTime.Text = "";
             txtDate.Text = "";
             txtPrice.Text = "";
-            lbltest.Text = "";
         }
     }
 }
