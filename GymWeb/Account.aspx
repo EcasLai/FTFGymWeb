@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="Account | FTF Gym Web" Language="C#" MasterPageFile="~/Account.master" AutoEventWireup="true" CodeBehind="Account.aspx.cs" Inherits="GymWeb.Account" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="AccountHead" runat="server">
     <style type="text/css">
         /* Right Content */

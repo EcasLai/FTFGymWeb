@@ -126,7 +126,7 @@
                 <div>
                     <span>Hi, </span>
                     <span id="user-fullname">
-                        <asp:LoginName ID="AccountLoginName" runat="server" />
+                        <asp:Label ID="lblDisplayName" runat="server" Text=""></asp:Label>
                     </span>  
                 </div>
             </section>
