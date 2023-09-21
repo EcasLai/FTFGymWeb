@@ -74,6 +74,7 @@
   <ItemGroup>
     <Content Include="Admin\AddWorkoutClass.aspx" />
     <Content Include="CreateUser.aspx" />
+    <Content Include="Img\ClassList\classBg3.jpg" />
     <Content Include="Img\Login\login_background.jpg" />
     <Content Include="Login.aspx" />
     <Content Include="Maintenance\Maintenance.aspx" />
