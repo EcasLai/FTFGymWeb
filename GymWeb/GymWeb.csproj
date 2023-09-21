@@ -145,7 +145,6 @@
       <LastGenOutput>Product1.cs</LastGenOutput>
     </Content>
     <Content Include="MyAccount\MyAccount.aspx" />
-    <Content Include="MyOrders.aspx" />
     <Content Include="PageNotFound.html" />
     <Content Include="ProductDetail.aspx" />
     <Content Include="ProductList.aspx" />
@@ -326,13 +325,6 @@
     </Compile>
     <Compile Include="MyAccount\MyAccount.aspx.designer.cs">
       <DependentUpon>MyAccount.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="MyOrders.aspx.cs">
-      <DependentUpon>MyOrders.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="MyOrders.aspx.designer.cs">
-      <DependentUpon>MyOrders.aspx</DependentUpon>
     </Compile>
     <Compile Include="ProductDetail.aspx.cs">
       <DependentUpon>ProductDetail.aspx</DependentUpon>
