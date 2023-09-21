@@ -30,7 +30,7 @@
                 Quantity:&nbsp;&nbsp;<asp:TextBox runat="server" ID="txtQuantity" ></asp:TextBox>
                 <br />
                 <br />
-                <asp:Button runat="server" CssClass="PayProduct" Text="Buy"></asp:Button>
+                <asp:Button runat="server" CssClass="PayProduct" Text="Buy" OnClick="Unnamed1_Click"></asp:Button>
                 <%--<p class="productName">productName</p>
                     
                 

@@ -39,7 +39,6 @@ namespace GymWeb
                     lblName.Text = productName;
                     lblPrice.Text = "RM " + productPrice;
                     lblDescription.Text = productDescription;
-                    
 
                 }
 
@@ -50,5 +49,9 @@ namespace GymWeb
 
         }
 
+        protected void Unnamed1_Click(object sender, EventArgs e)
+        {
+                Response.Redirect("ThankYou.aspx");
+        }
     }
 }

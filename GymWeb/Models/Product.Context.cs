@@ -13,10 +13,10 @@ namespace GymWeb.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class FTFGymEntities : DbContext
+    public partial class FTFGymEntities1 : DbContext
     {
-        public FTFGymEntities()
-            : base("name=FTFGymEntities")
+        public FTFGymEntities1()
+            : base("name=FTFGymEntities1")
         {
         }
     

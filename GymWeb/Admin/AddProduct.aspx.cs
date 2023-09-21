@@ -31,9 +31,9 @@ namespace GymWeb
             if (ModelState.IsValid)
             {
                 // Save changes here
-                Models.FTFGymEntities _pd = new Models.FTFGymEntities();
+                Models.FTFGymEntities1 _pd = new Models.FTFGymEntities1();
 
-                _pd.Products.Add(item);
+                _pd.Products.Add(item); 
                 _pd.SaveChanges();
                 Response.Redirect("~/Admin/ViewProduct.aspx");
             }

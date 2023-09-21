@@ -76,10 +76,15 @@
     <Content Include="Admin\AddWorkoutClass.aspx" />
     <Content Include="Admin\ViewWorkoutClass.aspx" />
     <Content Include="CreateUser.aspx" />
+    <Content Include="EquipmentProductList.aspx" />
     <Content Include="Img\account-icon\hide.png" />
     <Content Include="Img\account-icon\show.png" />
     <Content Include="Img\ClassList\classBg3.jpg" />
     <Content Include="Img\Login\login_background.jpg" />
+    <Content Include="Img\product\Equipment%281%29.jpg" />
+    <Content Include="Img\product\Equipment%282%29.jpg" />
+    <Content Include="Img\product\Item%281%29.jpg" />
+    <Content Include="Img\product\Item%282%29.jpg" />
     <Content Include="Img\product\Men%281%29.jpg" />
     <Content Include="Img\product\Men%282%29.jpg" />
     <Content Include="Img\product\Men%283%29.jpg" />
@@ -87,6 +92,10 @@
     <Content Include="Img\product\Men%285%29.jpg" />
     <Content Include="Img\product\Men%286%29.jpg" />
     <Content Include="Img\product\Women%281%29.jpg" />
+    <Content Include="Img\product\Women%282%29.jpg" />
+    <Content Include="Img\product\Women%283%29.jpg" />
+    <Content Include="Img\product\Women%284%29.jpg" />
+    <Content Include="ItemProductList.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Maintenance\Maintenance.aspx" />
     <Content Include="Account.aspx" />
@@ -147,7 +156,7 @@
     <Content Include="MyAccount\MyAccount.aspx" />
     <Content Include="PageNotFound.html" />
     <Content Include="ProductDetail.aspx" />
-    <Content Include="ProductList.aspx" />
+    <Content Include="MenProductList.aspx" />
     <Content Include="script\Account.js" />
     <Content Include="script\ChangePassword.js" />
     <Content Include="script\Homepage.js" />
@@ -162,6 +171,9 @@
     <Content Include="video.mp4" />
     <Content Include="Admin\ViewProduct.aspx" />
     <Content Include="Web.config" />
+    <Content Include="Order.aspx" />
+    <Content Include="ThankYou.aspx" />
+    <Content Include="WomenProductList.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Account.master.cs">
@@ -226,6 +238,20 @@
     </Compile>
     <Compile Include="CreateUser.aspx.designer.cs">
       <DependentUpon>CreateUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EquipmentProductList.aspx.cs">
+      <DependentUpon>EquipmentProductList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EquipmentProductList.aspx.designer.cs">
+      <DependentUpon>EquipmentProductList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ItemProductList.aspx.cs">
+      <DependentUpon>ItemProductList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ItemProductList.aspx.designer.cs">
+      <DependentUpon>ItemProductList.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
@@ -333,12 +359,12 @@
     <Compile Include="ProductDetail.aspx.designer.cs">
       <DependentUpon>ProductDetail.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ProductList.aspx.cs">
-      <DependentUpon>ProductList.aspx</DependentUpon>
+    <Compile Include="MenProductList.aspx.cs">
+      <DependentUpon>MenProductList.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ProductList.aspx.designer.cs">
-      <DependentUpon>ProductList.aspx</DependentUpon>
+    <Compile Include="MenProductList.aspx.designer.cs">
+      <DependentUpon>MenProductList.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Trainers.aspx.cs">
@@ -355,6 +381,27 @@
     <Compile Include="Admin\ViewProduct.aspx.designer.cs">
       <DependentUpon>ViewProduct.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Order.aspx.cs">
+      <DependentUpon>Order.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Order.aspx.designer.cs">
+      <DependentUpon>Order.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ThankYou.aspx.cs">
+      <DependentUpon>ThankYou.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThankYou.aspx.designer.cs">
+      <DependentUpon>ThankYou.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WomenProductList.aspx.cs">
+      <DependentUpon>WomenProductList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WomenProductList.aspx.designer.cs">
+      <DependentUpon>WomenProductList.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Gym.Master" />
@@ -364,13 +411,6 @@
     <Content Include="Account.master" />
     <Content Include="libman.json" />
     <Content Include="Admin\AdminHome.Master" />
-    <EntityDeploy Include="Models\Product.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Product.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\Product.edmx.diagram">
-      <DependentUpon>Product.edmx</DependentUpon>
-    </Content>
     <Content Include="Admin\AdminHome.Master" />
     <Content Include="Admin\Web.config" />
     <EntityDeploy Include="Models\Customer.edmx">
@@ -379,6 +419,13 @@
     </EntityDeploy>
     <Content Include="Models\Customer.edmx.diagram">
       <DependentUpon>Customer.edmx</DependentUpon>
+    </Content>
+    <EntityDeploy Include="Models\Product.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Product.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Product.edmx.diagram">
+      <DependentUpon>Product.edmx</DependentUpon>
     </Content>
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
