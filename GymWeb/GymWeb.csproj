@@ -74,6 +74,8 @@
   <ItemGroup>
     <Content Include="Admin\AddWorkoutClass.aspx" />
     <Content Include="CreateUser.aspx" />
+    <Content Include="Img\account-icon\hide.png" />
+    <Content Include="Img\account-icon\show.png" />
     <Content Include="Img\ClassList\classBg3.jpg" />
     <Content Include="Img\Login\login_background.jpg" />
     <Content Include="Login.aspx" />
@@ -119,6 +121,16 @@
     <Content Include="Img\product\Women%27s%283%29.jpg" />
     <Content Include="Media\fitness.mp4" />
     <Content Include="Media\Promo.mp4" />
+    <Content Include="Models\Customer.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Customer.edmx</DependentUpon>
+      <LastGenOutput>Customer.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\Customer.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Customer.edmx</DependentUpon>
+      <LastGenOutput>Customer1.cs</LastGenOutput>
+    </Content>
     <Content Include="Models\Product.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Product.edmx</DependentUpon>
@@ -131,6 +143,7 @@
     </Content>
     <Content Include="MyAccount\MyAccount.aspx" />
     <Content Include="MyOrders.aspx" />
+    <Content Include="PageNotFound.html" />
     <Content Include="ProductDetail.aspx" />
     <Content Include="ProductList.aspx" />
     <Content Include="script\Account.js" />
@@ -245,6 +258,24 @@
     <Compile Include="Homepage.aspx.designer.cs">
       <DependentUpon>Homepage.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Models\Customer.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Customer.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Customer.cs">
+      <DependentUpon>Customer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Customer.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Customer.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Customer1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Customer.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Product.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -329,6 +360,14 @@
       <DependentUpon>Product.edmx</DependentUpon>
     </Content>
     <Content Include="Admin\AdminHome.Master" />
+    <Content Include="Admin\Web.config" />
+    <EntityDeploy Include="Models\Customer.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Customer.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Customer.edmx.diagram">
+      <DependentUpon>Customer.edmx</DependentUpon>
+    </Content>
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

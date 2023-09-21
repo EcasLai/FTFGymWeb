@@ -24,13 +24,13 @@ namespace GymWeb
         protected global::System.Web.UI.WebControls.ContentPlaceHolder AccountHead;
 
         /// <summary>
-        /// AccountLoginName control.
+        /// lblDisplayName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LoginName AccountLoginName;
+        protected global::System.Web.UI.WebControls.Label lblDisplayName;
 
         /// <summary>
         /// AccountIcon control.

@@ -21,6 +21,10 @@
 
     <!-- Javascript Functions -->
     <SCRIPT language=Javascript>
+
+        
+        
+
       function isNumberKey(evt)
       {
          var charCode = (evt.which) ? evt.which : evt.keyCode;
@@ -52,8 +56,13 @@
                     <li><a href="/" class="nav-link" >Home</a></li>
                     <li><a href="ProductList.aspx" class="nav-link">Product</a></li>
                     <li><a href="ClassList.aspx" class="nav-link">Class</a></li>
-                    <li><a href="Account.aspx" class="nav-link" onclick="(function(){sessionStorage.setItem('activeTab', 0);})()">Account</a></li>
-                </ul>       
+                    <li><a href="Account.aspx" class="nav-link" id="account-nav" onclick="(function(){sessionStorage.setItem('activeTab', 0);})()">Account</a></li>
+                </ul>      
+                <ul class="nav-user-session">
+                    <li><asp:HyperLink ID="linkLogin" NavigateUrl="~/Login.aspx" runat="server" CssClass="login-nav">Login</asp:HyperLink></li>
+                    <li><asp:Button ID="linkLogout" CssClass="logout-nav" runat="server" Text="Logout" OnClick="linkLogout_Click" /></li>
+                    
+                </ul>
             </section>
         </nav>
 
@@ -64,5 +73,36 @@
             </asp:ContentPlaceHolder>
         </section>
     </form>
+
+    <script defer>
+        var myCookie = getCookieValue("email")
+
+        checkIsLoggedIn();
+
+        function checkIsLoggedIn() {
+            const accountNav = document.getElementById("account-nav")
+            const loginNav = document.getElementsByClassName("login-nav")
+            const logoutNav = document.getElementsByClassName("logout-nav")
+
+            let userEmail = getCookieValue("email")
+            if (!userEmail) {
+                accountNav.style.display = "none"
+                loginNav[0].style.display = "inline";
+                logoutNav[0].style.display = "none";
+            } else {
+                accountNav.style.display = "inline"
+                loginNav[0].style.display = "none";
+                logoutNav[0].style.display = "inline";
+            }
+        }
+
+        function getCookieValue(name) {
+            const regex = new RegExp('(^| )' + name + '=([^;]+)')
+            const match = document.cookie.match(regex)
+            if (match) {
+                return match[2]
+            }
+        }
+    </script>
 </body>
 </html>
