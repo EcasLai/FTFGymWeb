@@ -72,6 +72,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Admin\AddCategory.aspx" />
     <Content Include="Admin\AddWorkoutClass.aspx" />
     <Content Include="Admin\ViewWorkoutClass.aspx" />
     <Content Include="CreateUser.aspx" />
@@ -79,6 +80,13 @@
     <Content Include="Img\account-icon\show.png" />
     <Content Include="Img\ClassList\classBg3.jpg" />
     <Content Include="Img\Login\login_background.jpg" />
+    <Content Include="Img\product\Men%281%29.jpg" />
+    <Content Include="Img\product\Men%282%29.jpg" />
+    <Content Include="Img\product\Men%283%29.jpg" />
+    <Content Include="Img\product\Men%284%29.jpg" />
+    <Content Include="Img\product\Men%285%29.jpg" />
+    <Content Include="Img\product\Men%286%29.jpg" />
+    <Content Include="Img\product\Women%281%29.jpg" />
     <Content Include="Login.aspx" />
     <Content Include="Maintenance\Maintenance.aspx" />
     <Content Include="Account.aspx" />
@@ -113,13 +121,7 @@
     <Content Include="Img\Trainer\Trainer3.png" />
     <Content Include="Img\Trainer\Trainer4.jpg" />
     <Content Include="Img\Trainer\Trainer5.jpg" />
-    <Content Include="Img\product\Men%27s%281%29.jpg" />
-    <Content Include="Img\product\Men%27s%282%29.jpg" />
-    <Content Include="Img\product\Men%27s%283%29.jpg" />
     <Content Include="Img\product\productLogo.jpg" />
-    <Content Include="Img\product\Women%27s%281%29.jpg" />
-    <Content Include="Img\product\Women%27s%282%29.jpg" />
-    <Content Include="Img\product\Women%27s%283%29.jpg" />
     <Content Include="Media\fitness.mp4" />
     <Content Include="Media\Promo.mp4" />
     <Content Include="Models\Customer.Context.tt">
@@ -154,6 +156,7 @@
     <Content Include="Style\classList.css" />
     <Content Include="Style\homepage.css" />
     <Content Include="Style\master.css" />
+    <Content Include="Style\star.css" />
     <Content Include="Trainers.aspx" />
     <Content Include="Style\productDetail.css" />
     <Content Include="Style\productList.css" />
@@ -175,6 +178,13 @@
     </Compile>
     <Compile Include="AddTrainer.aspx.designer.cs">
       <DependentUpon>AddTrainer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AddCategory.aspx.cs">
+      <DependentUpon>AddCategory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AddCategory.aspx.designer.cs">
+      <DependentUpon>AddCategory.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\AddProduct.aspx.cs">
       <DependentUpon>AddProduct.aspx</DependentUpon>
@@ -361,6 +371,7 @@
     <Content Include="MyAccount\Account.Master" />
     <Content Include="Account.master" />
     <Content Include="libman.json" />
+    <Content Include="Admin\AdminHome.Master" />
     <EntityDeploy Include="Models\Product.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Product.Designer.cs</LastGenOutput>
