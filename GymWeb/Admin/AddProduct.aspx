@@ -77,7 +77,7 @@
                         CommandName="Insert" />
 
                     <asp:Button ID="Button2" runat="server" Text="Cancel"
-                        CommandName="Cancel" />
+                        CommandName="Cancel" /> 
 
                 </InsertItemTemplate>
             </asp:FormView>

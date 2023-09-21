@@ -35,14 +35,13 @@
             </asp:GridView>
             &nbsp;
             <br />
-            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" DeleteCommand="DELETE FROM [Product] WHERE [ProductId] = @ProductId" InsertCommand="INSERT INTO [Product] ([Name], [Description], [Rating], [Stock], [Price], [ImageUrl], [CategoryId]) VALUES (@Name, @Description, @Rating, @Stock, @Price, @ImageUrl, @CategoryId)" SelectCommand="SELECT * FROM [Product]" UpdateCommand="UPDATE [Product] SET [Name] = @Name, [Description] = @Description, [Rating] = @Rating, [Stock] = @Stock, [Price] = @Price, [ImageUrl] = @ImageUrl, [CategoryId] = @CategoryId WHERE [ProductId] = @ProductId">
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" DeleteCommand="DELETE FROM [Product] WHERE [ProductId] = @ProductId" InsertCommand="INSERT INTO [Product] ([Name], [Description], [Stock], [Price], [ImageUrl], [CategoryId]) VALUES (@Name, @Description, @Stock, @Price, @ImageUrl, @CategoryId)" SelectCommand="SELECT * FROM [Product]" UpdateCommand="UPDATE [Product] SET [Name] = @Name, [Description] = @Description, [Stock] = @Stock, [Price] = @Price, [ImageUrl] = @ImageUrl, [CategoryId] = @CategoryId WHERE [ProductId] = @ProductId">
                 <DeleteParameters>
                     <asp:Parameter Name="ProductId" Type="Int32" />
                 </DeleteParameters>
                 <InsertParameters>
                     <asp:Parameter Name="Name" Type="String" />
                     <asp:Parameter Name="Description" Type="String" />
-                    <asp:Parameter Name="Rating" Type="Decimal" />
                     <asp:Parameter Name="Stock" Type="Int32" />
                     <asp:Parameter Name="Price" Type="Decimal" />
                     <asp:Parameter Name="ImageUrl" Type="String" />
@@ -51,7 +50,6 @@
                 <UpdateParameters>
                     <asp:Parameter Name="Name" Type="String" />
                     <asp:Parameter Name="Description" Type="String" />
-                    <asp:Parameter Name="Rating" Type="Decimal" />
                     <asp:Parameter Name="Stock" Type="Int32" />
                     <asp:Parameter Name="Price" Type="Decimal" />
                     <asp:Parameter Name="ImageUrl" Type="String" />

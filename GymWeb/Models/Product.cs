@@ -17,7 +17,6 @@ namespace GymWeb.Models
         public int ProductId { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
-        public Nullable<decimal> Rating { get; set; }
         public Nullable<int> Stock { get; set; }
         public Nullable<decimal> Price { get; set; }
         public string ImageUrl { get; set; }
