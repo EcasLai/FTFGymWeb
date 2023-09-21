@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 
-    .productPageImg img {
+    .productPageImgASP {
         padding: 5%;
     }
 
@@ -25,6 +25,10 @@
 
 .productPrice {
     font-size: 30px;
+}
+
+.productDescription {
+    font-size: 20px;
 }
 
 .SizeSelection {
